@@ -1,0 +1,1856 @@
+HTML Tag   ->    HyperText MarkUp language
+HTML stands for HyperText Markup Language:
+
+    1.  A markup language is a computer language that defines the structure and presentation of raw text.
+    2.  In HTML, 
+        the computer can interpret raw text that is wrapped in HTML elements.
+    3.  HyperText is text displayed on a computer or device that provides access to other text 
+    through links, also known as hyperlinks. 
+  
+Opening Tag                Closing Tag
+    |                        |
+    |                        |
+    |                        |
+ | <p> This is a paragraph </p> |
+ |      |                |      |
+ |      |________________|      |
+ |             |                |
+ |         Content              |
+ |______________________________|
+                |
+            Element 
+ 
+<p>  Opening tag
+</p> Closing Tag
+
+
+Doctype and HTML tags
+    *   The very first tag you need is the doctype tag. 
+    *   It’s not exactly an HTML tag, but it tells the browser that this is an HTML5 document.
+Here’s what it looks like: <!DOCTYPE html>
+    *   This tag doesn’t require a closing tag because it’s not surrounding any text, it’s just declaring that this is HTML.
+
+
+<!DOCTYPE html>             tells browser that you are using HTML 5
+<html>      After the doctype, you have an HTML tag. This one tells the web browser that everything inside it is HTML:
+
+    Head wo cheeze bata hai jo web page par display nahi karni 
+<head>      container for metadata
+    <title>Document</title>     page title
+</head>
+
+    Body ki cheze web page par display ho thi hai 
+<body>          contains all data rendered by the browser
+    <p> This is a paragraph</p>             paragraph tag
+</body>
+</html>
+
+
+Anything between the opening <html> and closing </html> tags will be interpreted as HTML code. 
+Without these tags, it’s possible that browsers could incorrectly interpret your HTML code.
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">          
+   
+        View Port web page ko responsive kar raha hai 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    This one is important for responsive websites. 
+    Responsive means that the website can display properly on all devices– computers, tablets, and mobile phones.
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title> name of document </title>
+</head>
+<body>
+</body>
+</html>
+
+
+Quick Points 
+
+HTML Tag is parent of Head and Body Tag
+
+Most of HTML elements hava opening and closing tags 
+with contents  in between 
+
+Some tags have no content in between    <br>
+
+We can use inspect element/view page source to edit html
+
+
+Comments in HTML
+This is a part of code that should not be parsed 
+<!-- This is a n HTML Comment -->
+
+
+HTMl is not case sensitive 
+
+
+
+
+
+Basic HTML Tags 
+HTMl Tags
+Attributes are used to add more information to the tag 
+
+<html lang ="en">
+lang attribute          language attribute
+language in english 
+
+Headings
+Headings in HTML are similar to headings in other types of media. 
+For example, in newspapers, large headings are typically used to capture a reader’s attention. 
+Other times, headings are used to describe content, like the title of a movie or an educational article.
+
+HTML follows a similar pattern. 
+In HTML, there are six different headings, or heading elements. 
+Headings can be used for a variety of purposes, like titling sections, articles, or other forms of content.
+
+They are ordered from largest to smallest in size.
+
+<h1> — used for main headings. 
+<h2>  ____
+<h3>      |
+<h4>      |
+<h5>      | ----->   All other smaller headings are used for subheadings.
+<h6>  ____|
+
+
+    Used to display heading in HTML
+h1      Most important
+h2
+h3
+h4
+h5
+h6  least important
+
+    <h1> Heading 1  (most important )</h1>
+    <h2> Heading 2 </h2>
+    <h3> Heading 3 </h3>
+    <h4> Heading 4 </h4>
+    <h5> Heading 5 </h5>
+    <h7> Heading 6  (least important)</h6>
+
+Heading ko imprtance dekhane ke liye use karna chaiye 
+
+Agar koi text bada chaiye tho font sixze increase karna chaiye 
+
+Paragraph Tag 
+Used tp add paragraph in HTML 
+
+<p> This is a sample paragraph </p>
+
+
+
+
+HTML Structure
+    ~   HTML is organized as a collection of family tree relationships. 
+    ~   we placed <p> tags within <body> tags. 
+    ~   When an element is contained inside another element, it is considered the child of that element. 
+    ~   The child element is said to be nested inside of the parent element.
+ 
+<body>
+  <p>This paragraph is a child of the body</p>
+</body>
+
+    ~   the <p> element is nested inside the <body> element. 
+    ~   The <p> element is considered a child of the <body> element, and the <body> element is considered the parent. 
+    ~   You can also see that we’ve added two spaces of indentation (using the space bar) for better readability.
+
+Since there can be multiple levels of nesting, this analogy can be extended to grandchildren, great-grandchildren, and beyond. 
+The relationship between elements and their ancestor and descendent elements is known as hierarchy.
+
+<body>
+  <div>
+    <h1>Sibling to p, but also grandchild of body</h1>
+    <p>Sibling to h1, but also grandchild of body</p>
+  </div>
+</body>
+
+    ~   the <body> element is the parent of the <div> element. 
+    ~   Both the <h1> and <p> elements are children of the <div> element. 
+    ~   Because the <h1> and <p> elements are at the same level, they are considered siblings and are both 
+grandchildren of the <body> element.
+
+
+
+
+    ~   The anchor element in the example above is incomplete without the href attribute. 
+    *   This attribute stands for hyperlink reference and is used to link to a path, or the address to where a file is located (whether it is on your computer or another location). 
+T   ~   The paths provided to the href attribute are often URLs.
+
+
+
+
+Anchor Tag
+Used to add Links to ypur page 
+
+<a href= "https://www.google.com/" > Google </a>
+
+
+<!--    Anchor Tag -->
+<!-- Abosulute links  -->
+<a href= "https://www.google.com/" > Google </a> 
+<a href= "https://www.youtube.com" > Youtube </a> 
+<a href = "https://www.msn.com/en-in/feed?ocid=wn_startbrowsing"> Microsoft Edge</a>
+
+
+
+<!-- Relative links  -->
+<!-- This is Link to my Html page Hello -->
+<a href = "Hello.html" > Hello </a>
+
+
+Opening Links in a New Window
+The target attribute specifies how a link should open.
+
+It’s possible that one or more links on your web page link to an entirely different website. 
+In that case, you may want users to read the linked website, but hope that they return to your web page. 
+This is exactly when the target attribute is useful!
+
+    ~   For a link to open in a new window, the target attribute requires a value of _blank. 
+    ~   The target attribute can be added directly to the opening tag of the anchor element, just like the href attribute.
+
+
+Image Tag 
+USed to add images to your page 
+
+<img src = "C:\Users\sukho\Pictures\2022-12-10\5446.jpg" alt="Random image ">
+
+
+Br Tag
+Used to add next line (Line Breaks) to your page 
+<br>
+
+Bold, Italic and UnderLine Tags
+used to highlight text in your page 
+<b> Bold </b>
+<i> Italic </i>
+<u> Underline </u>
+
+
+Big and Small Tags
+used to display big and small text on your page 
+
+<big> Big </big>
+<small> Small </small>
+
+
+Hr Tag
+used to display a horizontal ruler , used to separate content 
+<hr>
+
+
+Subscript and Superscript Tag
+
+<sub> Subscript </sub>
+    H20
+<sup> Superscript </sup>
+    a^n + b  
+
+
+Pre Tag
+Used to display text as it is (without ignoring spaces and next line )
+<pre> This 
+    is a sample 
+    text.
+</pre>
+
+
+
+
+Images
+    ~   The <img> tag allows you to add an image to a web page. 
+Most elements require both opening and closing tags, 
+    ~   but the <img> tag is a self-closing tag. 
+
+*   Note that the end of the <img> tag has a forward slash /. 
+Self-closing tags may include or omit the final slash — both will render properly.
+
+<img src="image-location.jpg" />
+
+    *   The <img> tag has a required attribute called src. 
+    The src attribute must be set to the image’s source, or the location of the image. 
+
+
+
+Image Alts
+    ~   In order to make the Web more inclusive, we need to consider what happens when assistive technologies such as screen readers come across image tags.
+
+    ~   The alt attribute, which means alternative text, brings meaning to the images on our sites. 
+    ~   The alt attribute can be added to the image tag just like the src attribute. 
+    ~   The value of alt should be a description of the image.
+
+            <img src="#" alt="A field of yellow sunflowers" />
+
+    *   If an image fails to load on a web page, a user can mouse over the area originally intended 
+for the image and read a brief description of the image. 
+This is made possible by the description you provide in the alt attribute.
+    *   Visually impaired users often browse the web with the aid of screen reading software. 
+When you include the alt attribute, the screen reading software can read the image’s description out 
+loud to the visually impaired user.
+    *   The alt attribute also plays a role in Search Engine Optimization (SEO), because search engines 
+cannot “see” the images on websites as they crawl the internet. 
+Having descriptive alt attributes can improve the ranking of your site.
+
+
+
+<!DOCTYPE html>
+<!-- this is my first html code -->
+<html lang="en">
+<HEAD>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First HTML </title>
+</head>
+<!-- yeh Comment  ka tarika hai -->
+<body>
+
+    <h1>Hello Anchal !</h1>
+    <p> This is a paragraph</p>
+    <br>
+    <hr>
+
+    <h1> Heading 1  (most important )</h1>
+    <h2> Heading 2 </h2>
+    <h3> Heading 3 </h3>
+    <h4> Heading 4 </h4>
+    <h5> Heading 5 </h5>
+    <h7> Heading 6  (least important)</h6>
+    <hr>
+
+    <p> Sample Paragraph  </p>
+    <hr>
+
+    <!--    Anchor Tag -->
+    <a href= "https://www.google.com/" > Google </a> 
+    <br/>
+    <a href= "https://www.youtube.com" > Youtube </a> 
+    <br/>
+    <a href = "https://www.msn.com/en-in/feed?ocid=wn_startbrowsing"> Microsoft Edge</a>
+    <br/>
+    <br/> 
+    
+    <!-- This is Link to my Html page Hello -->
+    <a href = "Hello.html" > Hello </a>
+
+    <br/> 
+    <hr>
+    
+    <img src = "https://3.bp.blogspot.com/-7tOnI47ycvM/V5xCQo-PLBI/AAAAAAAACMc/mwvTcj-5BIMB9zTIDmAXf0KaewZQ0QvQwCLcB/s1600/d10.jpg" alt=" Jigglypuff  ">
+    <br>
+    <br>
+    <br>
+    <img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFGN33PSoAJ450SvPsjsJSrhdQfo4G3wxVsDIrO_WPAptJ8q3fGj2TT_rgGEvxU8vZjY4&usqp=CAU" alt=" Pikachu " height="200" >
+    <hr>
+    <br>
+    <br>
+    <b> Bold </b>
+    <br>
+    <br>
+    <i> Italic </i>
+    <br>
+    <br>
+    <u> Underline </u>
+    <br>
+    <hr>
+    <p>
+        <b> <u> Sample Paragraph </u></b>
+        <br>
+        sampleParagraphsampleParagraphsampleParagraphsampleParagraphsampleParagraphsampleParagraphsampleParagraphsampleParagraphsampleParagraphsampleParagraphsampleParagraphsampleParagraph
+    </p>
+    <hr>
+    <big> This tag shows Big text </big>
+    <hr>
+    <small> This tag shows Small text</small>
+    <hr>
+    <p>
+        <big>
+            H<sub>2</sub>0
+        </big>
+        <br>
+        <big>
+            A<sup>n</sup> + B 
+        </big>
+    </p>
+    <br>
+    <pre> This 
+        is a Sample
+        text.
+    </pre>
+</body>
+</html>  
+
+
+
+Page Layout Techniques 
+using Sematics tags for layouts 
+using the Right tags
+
+<header>
+<main>
+<footer >
+
+
+Inside Main Tag 
+Section Tag For a sextion on your page 
+<section>
+Article Tag      For an article on your page 
+<article>
+Aside Tag   For content aside main content(ads)
+<aside>
+
+
+
+Revisting Anchor Tag 
+Agar link click karne par new tab me kol wana hai tho use karno 
+<a href = "https://google.com" target="_main"> Google </a>
+                                |
+                                |
+                                |
+                                |
+                            new tab
+
+
+Hum apnii pictures ko clickable banana hai 
+<a href = "https://google.com"> <img src = "link" ></a>
+
+
+
+
+Revisting Image Tag
+<img src = "link" height=50px>
+                        |
+                        |
+                    set height
+<img src="link" width = 50px>
+                    |
+                    |
+                set width 
+
+
+
+
+Divs
+    ~   <div> is short for “division” or a container that divides the page into sections. 
+    ~   These sections are very useful for grouping elements in your HTML together.
+
+<body>
+  <div>
+    <h1>Why use divs?</h1>
+    <p>Great for grouping elements!</p>
+  </div>
+</body>
+
+    ~   <div>s don’t inherently have a visual representation, 
+but they are very useful when we want to apply custom styles to our HTML elements. 
+    
+    ~   <div>s allow us to group HTML elements to apply the same styles for all HTML elements inside. 
+We can also style the <div> element as a whole. 
+
+    ~   <div>s can contain any text or other HTML elements, 
+such as links, images, or videos. 
+
+
+
+Div Tsg 
+Div is a container used for other HTML elements 
+
+
+Attributes
+    ~   If we want to expand an element’s tag, we can do so using an attribute. 
+    ~   Attributes are content added to the opening tag of an element and can be used 
+in several different ways, from providing information to changing styling. 
+    
+    ~   Attributes are made up of the following two parts:
+        *   The name of the attribute
+        *   The value of the attribute
+
+One commonly used attribute is the id. 
+We can use the id attribute to specify different content (such as <div>s) 
+and is really helpful when you use an element more than once. 
+
+ids have several different purposes in HTML, 
+    but for now, we’ll focus on how they can help us identify content on our page.
+
+When we add an id to a <div>, we place it in the opening tag:
+
+<div id="intro">
+  <h1>Introduction</h1>
+</div>
+
+<body>
+    <h1>The Brown Bear</h1>
+    <div id="introduction">
+        <h2> About Brown Bears </h2>
+        <h3> Species </h3>
+        <h3> Features </h3>
+    </div>
+    <div id="habitat">
+        <h2> Habitat </h2>
+        <h3> Countries with Large Brown Bear Populations</h3>
+        <h3> Countries with Small Brown Bear Populations</h3>
+    </div>
+    <div id="media">
+        <h2> Media </h2>
+    </div>
+</body>
+
+Block ELements 
+
+
+
+List : Block Elemetns 
+<address>                       <fieldset>                              <nav>
+<article>                       <figcaption>                            <noscript>
+aside>                          <figure>                                <ol>
+<blockquote>                    <footer>                                <p>
+<canvas>                        <form>                                  <pre>
+<dd>                            <h1>--<h6>
+<div>                           <header>
+<dl>                            <hr>
+<dt>                            <li>
+                                <main>
+
+Span Tag
+Span is also a container used for other HTML elements
+
+
+Displaying Text
+    ~   If you want to display text in HTML, you can use a paragraph or span:
+    *   Paragraphs (<p>) contain a block of plain text.
+    *   <span> contains short pieces of text or other HTML. 
+    They are used to separate small pieces of content that are on the same line as other content.
+
+
+It’s best to use a <span> element when you want to target a specific piece of content that is inline, 
+or on the same line as other text. 
+
+If you want to divide your content into blocks, it’s better to use a <div>.
+
+
+Inline Element(takes width as per size)
+
+List Inline Tags
+<a>
+<abbr>
+<acronym>
+<b>
+<Bold
+<big>
+<brbutton >
+<cite>
+
+
+Styling Text
+You can also style text using HTML tags. 
+The <em> tag emphasizes text, while the <strong> tag highlights important text.
+
+Later, when you begin to style websites, 
+you will decide how you want browsers to display content within <em> and <strong> tags. 
+Browsers, however, have built-in style sheets that will generally style these tags in the following ways:
+    *   The <em> tag will generally render as italic emphasis.
+    *   The <strong> will generally render as bold emphasis.
+
+
+
+
+
+
+<!DOCTYPE html>
+<!-- this is my first html code -->
+<html lang="en">
+<HEAD>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First HTML </title>
+</head>
+<!-- yeh Comment  ka tarika hai -->
+<body>
+
+    <h1>Hello Anchal !</h1>
+    <p> This is a paragraph</p>
+    <br>
+    <hr>
+
+    <h1> Heading 1  (most important )</h1>
+    <h2> Heading 2 </h2>
+    <h3> Heading 3 </h3>
+    <h4> Heading 4 </h4>
+    <h5> Heading 5 </h5>
+    <h7> Heading 6  (least important)</h6>
+    <hr>
+
+    <p> Sample Paragraph  </p>
+    <hr>
+
+    <!--    Anchor Tag -->
+    <a href= "https://www.google.com/" > Google </a> 
+    <br/>
+    <a href= "https://www.youtube.com" > Youtube </a> 
+    <br/>
+    <a href = "https://www.msn.com/en-in/feed?ocid=wn_startbrowsing"> Microsoft Edge</a>
+    <br/>
+    <br/> 
+    
+    <!-- This is Link to my Html page Hello -->
+    <a href = "Hello.html" > Hello </a>
+
+    <br/> 
+    <hr>
+    
+    <img src = "https://3.bp.blogspot.com/-7tOnI47ycvM/V5xCQo-PLBI/AAAAAAAACMc/mwvTcj-5BIMB9zTIDmAXf0KaewZQ0QvQwCLcB/s1600/d10.jpg" alt=" Jigglypuff  ">
+    <br>
+    <br>
+    <br>
+    <img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFGN33PSoAJ450SvPsjsJSrhdQfo4G3wxVsDIrO_WPAptJ8q3fGj2TT_rgGEvxU8vZjY4&usqp=CAU" alt=" Pikachu " height="200" >
+    <hr>
+    <br>
+    <br>
+    <b> Bold </b>
+    <br>
+    <br>
+    <i> Italic </i>
+    <br>
+    <br>
+    <u> Underline </u>
+    <br>
+    <hr>
+    <p>
+        <b> <u> Sample Paragraph </u></b>
+        <br>
+        sampleParagraphsampleParagraphsampleParagraphsampleParagraphsampleParagraphsampleParagraphsampleParagraphsampleParagraphsampleParagraphsampleParagraphsampleParagraphsampleParagraph
+    </p>
+    <hr>
+    <big> This tag shows Big text </big>
+    <hr>
+    <small> This tag shows Small text</small>
+    <hr>
+    <p>
+        <big>
+            H<sub>2</sub>0
+        </big>
+        <br>
+        <big>
+            A<sup>n</sup> + B 
+        </big>
+    </p>
+    <br>
+    <pre> This 
+        is a Sample
+        text.
+    </pre>
+</body>
+</html>  
+
+
+
+
+
+
+List in HTML 
+Lists are used to represent real life list data .
+    |                                           |   1   I   a
+    |                                           |   2   II  b
+    |                                           |   3   III c
+    |                                           |   4   IV  d
+unordered                                   ordered
+<ul>                                      <ol>
+    <li> Apple </li>                         <li> Apple </li>
+    <li> Mango </li>                         <li> Mango </li>
+</ul>                                     </ol>
+ 
+
+Ordered List
+1. Apple
+    1. Color : Red
+    2. Season : Winters
+2. Mango
+    1. Color : Yello Orange
+    2. Season : Summer
+3. Litchi
+
+
+Tables in HTML
+Tablesare used to represent real life table data.
+<tr>    used to display table row
+<td>    used to display table data
+<th>    used to display table header 
+
+Attributes
+    * border
+    * cellpadding
+    * cellspacing
+< table border ="10" cellpadding ="10" cellspacing="10" >
+
+
+Caption in Tables 
+<caption> Student Data </caption>
+
+
+
+thead and tbody in Tables 
+<thead> to wrap table head
+<tbody> to wrap table body
+
+
+but agar twp pr more coulums ke header ka naam ek hi rakehna chahe 
+<th colspal = "2">
+
+
+
+Form in HTML
+Forms are used to collect data from the user
+Eg . sign up/login/help requests/contact me
+<form>
+form content
+</form>
+
+Action in Form 
+Action attribute is used to define what action needs to be performed when a form is submitted 
+
+Form Element : Input
+
+
+
+
+Label
+<labrl for ="id1">
+    <input type="radio" value="class X" name="class" id="id1">
+</label>
+
+
+<input type="radio" value="class XI" name="class" id="101"> Class XI
+<input type="radio" value="class XII" name="class" id="102"> Class XII
+isse se jab hum radio button wala area per click karne ge tab hi button select hoga 
+
+
+<label for="101">
+    <input type="radio" value="class XI" name="class" id="101"> Class XI
+</label>
+<label for="102">
+    <input type="radio" value="class XII" name="class" id="102"> Class XII
+</label>
+label lagane se agar hum button ka text par click karenge tho 
+button select go jayega 
+
+
+
+
+
+Class and Id 
+<div id="id1" class ="group1">
+</div>
+
+<div id="id2"> class="group1">
+</div>
+
+
+Checkbox
+<lael for="id1">
+    <input type="checkbox" value = "class X" name = "class" id = "id1">
+</label>
+
+<label for = "id2">
+    <input type ="checkbox" value="class X" name = "class" id="id2">
+</label>
+
+
+
+<textarea name ="feedback" id="101" placeholder ="please give youe feedback  " rows="5" >
+    Feedback 
+</textarea>
+
+
+Select ------------>drop down
+<select name="city" id="city">
+    <option value ="Delhi"> Delhi </option>
+    <option value ="Mumbai" > Mumbai </option>
+    <option value= "Bangalore"> Bangalore </option>
+</select>
+
+
+
+Creating a submit button 
+<input type="submit" value="submit" >
+
+
+iframe
+it is used to display the conetes of another website on your website
+
+<iframe width="1280" height="720" 
+    src="https://www.youtube.com/embed/kUMe1FH4CHE" 
+    title="Learn HTML – Full Tutorial for Beginners (2022)" 
+    frameborder="0" 
+    allow="accelerometer; 
+    autoplay; 
+    clipboard-write; 
+    encrypted-media; 
+    gyroscope; 
+    picture-in-picture; web-share" 
+    allowfullscreen>
+</iframe>
+Like playing a youtube video on yuor own webiste 
+
+
+Video Tag
+<video src ="myVid.mp4"> My Video </video>
+
+Videos
+Like the <img> element, the <video> element requires a src attribute with a link to the video source. 
+Unlike the <img> element however, 
+    the <video> element requires an opening and a closing tag.
+
+    <video src="myVideo.mp4" width="320" height="240" controls>
+            Video not supported
+    </video>
+
+In this example, the video source (src) is "myVideo.mp4". 
+The source can be a video file that is hosted alongside your webpage, 
+    or a URL that points to a video file hosted on another webpage.
+
+After the src attribute, 
+    the width and height attributes are used to set the size of the video displayed in the browser. 
+The controls attribute instructs the browser to include basic video controls such as pausing and playing.
+
+The text, Video not supported, between the opening and closing video tags will only be displayed if the browser is unable to load the video.
+
+Attributes
+- control 
+- height
+- width 
+- loop
+- autoplay
+
+
+
+        <video width ="560" height="315" src="/myvideo.mov" controls> My Video</video>
+        <video width ="560" height="315" src="/abc.mov" loop> My Video</video>
+        <video width ="560" height="315" src="/xyz.mov" autoplay> My Video</video>
+
+
+
+Linking to Same Page
+At this point, we have all the content we want on our page. 
+Since we have so much content, it doesn’t all fit on the screen. 
+How do we make it easier for a user to jump to different portions of our page?
+
+When users visit our site, 
+    we want them to be able to click a link and have the page automatically scroll to a specific section.
+
+In order to link to a target on the same page, we must give the target an id, like this:
+    
+    <p id="top">This is the top of the page!</p>
+    <h1 id="bottom">This is the bottom! </h1>
+    
+In this example, the <p> element is assigned an id of “top” and the <h1> element is assigned “bottom.” 
+An id can be added to most elements on a webpage.
+
+An id should be descriptive to make it easier to remember the purpose of a link. 
+The target link is a string containing the # character and the target element’s id.
+
+            <ol>
+              <li><a href="#top">Top</a></li>
+              <li><a href="#bottom">Bottom</a></li>
+            </ol>
+            
+In the example above, the links to <p id="top"> and <h1 id="bottom"> are embedded in an ordered list. 
+These links appear in the browser as a numbered list of links. 
+An id is especially helpful for organizing content belonging to a div!
+
+
+Table Headings
+Table data doesn’t make much sense without titles to describe what the data represents.
+
+To add titles to rows and columns, you can use the table heading element: <th>.
+
+The table heading element is used just like a table data element, 
+    except with a relevant title. 
+Just like table data, a table heading must be placed within a table row.
+
+<table>
+  <tr>
+    <th></th>
+    <th scope="col">Saturday</th>
+    <th scope="col">Sunday</th>
+  </tr>
+  <tr>
+    <th scope="row">Temperature</th>
+    <td>73</td>
+    <td>81</td>
+  </tr>
+</table>
+What happened in the code above?
+
+First, a new row was added to hold the three headings: a blank heading, a Saturday heading, and a Sunday heading. The blank heading creates the extra table cell necessary to align the table headings correctly over the data they correspond to.
+
+In the second row, one table heading was added as a row title: Temperature.
+
+When rendered, this code will appear similar to the image below:Table Example
+
+Note, also, the use of the scope attribute, which can take one of two values:
+
+row - this value makes it clear that the heading is for a row.
+col - this value makes it clear that the heading is for a column.
+HTML code for tables may look a little strange at first, \
+but analyzing it piece by piece helps make the code more understandable.
+
+
+
+Table Borders
+So far, the tables you’ve created have been a little difficult to read because they have no borders.
+
+In older versions of HTML, a border could be added to a table using the border attribute and setting it equal to an integer. This integer would represent the thickness of the border.
+
+<table border="1">
+  <tr>
+    <td>73</td>
+    <td>81</td>
+  </tr>
+</table>
+The code in the example above is deprecated, so please don’t use it. It’s meant to illustrate older conventions you may come across when reading other developers’ code.
+
+The browser will likely still interpret your code correctly if you use the border attribute, but that doesn’t mean the attribute should be used.
+
+We use CSS to add style to HTML documents, because it helps us to separate the structure of a page from how it looks. You can learn more about CSS in our CSS courses.
+
+You can achieve the same table border effect using CSS.
+
+table, td {
+  border: 1px solid black;
+}
+The code in the example above uses CSS instead of HTML to show table borders.
+
+Spanning Columns
+What if the table contains data that spans multiple columns?
+
+For example, a personal calendar could have events that span across multiple hours, or even multiple days.
+
+Data can span columns using the colspan attribute. The attribute accepts an integer (greater than or equal to 1) to denote the number of columns it spans across.
+
+<table>
+  <tr>
+    <th>Monday</th>
+    <th>Tuesday</th>
+    <th>Wednesday</th>
+  </tr>
+  <tr>
+    <td colspan="2">Out of Town</td>
+    <td>Back in Town</td>
+  </tr>
+</table>
+In the example above, the data Out of Town spans the Monday and Tuesday table headings using the value 2 (two columns). The data Back in Town appear only under the Wednesday heading.
+
+Spanning Rows
+Data can also span multiple rows using the rowspan attribute.
+
+The rowspan attribute is used for data that spans multiple rows (perhaps an event goes on for multiple hours on a certain day). It accepts an integer (greater than or equal to 1) to denote the number of rows it spans across.
+
+<table>
+  <tr> <!-- Row 1 -->
+    <th></th>
+    <th>Saturday</th>
+    <th>Sunday</th>
+  </tr>
+  <tr> <!-- Row 2 -->
+    <th>Morning</th>
+    <td rowspan="2">Work</td>
+    <td rowspan="3">Relax</td>
+  </tr>
+  <tr> <!-- Row 3 -->
+    <th>Afternoon</th>
+  </tr>
+  <tr> <!-- Row 4 -->
+    <th>Evening</th>
+    <td>Dinner</td>
+  </tr>
+</table>
+In the example above, there are four rows:
+
+The first row contains an empty cell and the two column headings.
+The second row contains the Morning row heading, along with Work, which spans two rows under the Saturday column. The “Relax” entry spans three rows under the Sunday column.
+The third row only contains the Afternoon row heading.
+The fourth row only contains the Dinner entry, since “Relax” spans into the cell next to it.
+If you’d like to see how the browser interprets the code above, feel free to copy and paste it into the code editor to understand it a little better.
+
+
+
+Table Body
+Over time, a table can grow to contain a lot of data and become very long. When this happens, the table can be sectioned off so that it is easier to manage.
+
+Long tables can be sectioned off using the table body element: <tbody>.
+
+The <tbody> element should contain all of the table’s data, excluding the table headings (more on this in a later exercise).
+
+<table>
+  <tbody>
+    <tr>
+      <th></th>
+      <th>Saturday</th>
+      <th>Sunday</th>
+    </tr>
+    <tr>
+      <th>Morning</th>
+      <td rowspan="2">Work</td>
+      <td rowspan="3">Relax</td>
+    </tr>
+    <tr>
+     <th>Afternoon</th>
+    </tr>
+    <tr>
+      <th>Evening</th>
+      <td>Dinner</td>
+    </tr>
+  </tbody>
+</table>
+In the example above, all of the table data is contained within a table body element. Note, however, that the headings were also kept in the table’s body — we’ll change this in the next exercise.
+
+Table Head
+In the last exercise, the table’s headings were kept inside of the table’s body. 
+When a table’s body is sectioned off, however, 
+    it also makes sense to section off the table’s column headings 
+    using the <thead> element.
+
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th scope="col">Saturday</th>
+      <th scope="col">Sunday</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Morning</th>
+      <td rowspan="2">Work</td>
+      <td rowspan="3">Relax</td>
+    </tr>
+    <tr>
+     <th scope="row">Afternoon</th>
+    </tr>
+    <tr>
+      <th scope="row">Evening</th>
+      <td>Dinner</td>
+    </tr>
+  </tbody>
+</table>
+In the example above, 
+    the only new element is <thead>. 
+The table headings are contained inside of this element. 
+Note that the table’s head still requires a row in order to contain the table headings.
+
+Additionally, only the column headings go under the <thead> element. 
+We can use the scope attribute on <th> elements to indicate whether a 
+    <th> element is being used as a "row" heading or a "col" heading.
+
+
+
+Table Footer
+The bottom part of a long table can also be sectioned off using the <tfoot> element.
+
+<table>
+  <thead>
+    <tr>
+      <th>Quarter</th>
+      <th>Revenue</th>
+      <th>Costs</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Q1</th>
+      <td>$10M</td>
+      <td>$7.5M</td>
+    </tr>
+    <tr>
+      <th>Q2</th>
+      <td>$12M</td>
+      <td>$5M</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <th>Total</th>
+      <td>$22M</td>
+      <td>$12.5M</td>
+    </tr>
+  </tfoot>
+</table>
+In the example above, the footer contains the totals of the data in the table. Footers are often used to contain sums, differences, and other data results.
+
+
+
+
+Styling with CSS
+Tables, by default, are very bland. They have no borders, the font color is black, and the typeface is the same type used for other HTML elements.
+
+CSS, or Cascading Style Sheets, is a language that web developers use to style the HTML content on a web page. You can use CSS to style tables. Specifically, you can style the various aspects mentioned above.
+
+table, th, td {
+  border: 1px solid black;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+The code in the example above demonstrates just some of the various table aspects you can style using CSS properties.
+
+
+
+
+How a Form Works
+We can think of the internet as a network of computers which send and receive information. 
+Computers need an HTTP request to know how to communicate. 
+The HTTP request instructs the receiving computer how to handle the incoming information. 
+More information can be found in our article about HTTP requests.
+
+The <form> element is a great tool for collecting information, 
+  but then we need to send that information somewhere else for processing. 
+
+We need to supply the <form> element with both the location of where the <form>‘s 
+information goes and what HTTP request to make. 
+
+Take a look at the sample <form> below:
+    <form action="/example.html" method="POST">
+        </form>
+In the above example, 
+  we’ve created the skeleton for a <form> that will send information to 
+example.html as a POST request:
+
+  *   The action attribute determines where the information is sent.
+  *   The method attribute is assigned a HTTP verb that is included in the HTTP request.
+Note: HTTP verbs like POST do not need to be capitalized for the request to work, 
+    but it’s done so out of convention. 
+In the example above we could have written method="post" and it would still work.
+
+The <form> element can also contain child elements. 
+  For instance, it would be helpful to provide a header so that users know 
+  what this <form> is about. 
+
+We could also add a paragraph to provide even more detail. 
+
+Let’s see an example of this in code:
+
+  <form action="/example.html" method="POST">
+      <h1>Creating a form</h1>
+      <p> 
+      Looks like you want to learn how to create an HTML form. 
+      Well, the best way to learn is to play around with it.
+      </p>
+  </form>
+
+
+
+
+Text Input
+If we want to create an input field in our <form>, 
+  we’ll need the help of the <input> element.
+
+The <input> element has a type attribute which determines how 
+  it renders on the web page and what kind of data it can accept.
+
+The first value for the type attribute we’re going to explore is "text". 
+  When we create an <input> element with type="text", 
+    it renders a text field that users can type into. 
+
+~ Note that the default value of type is "text". 
+
+It’s also important that we include a name attribute for the 
+    <input> — without the name attribute, 
+    information in the <input> won’t be sent when the <form> is submitted. 
+
+We’ll explain more about submissions and the submit button in a later exercise. 
+
+For now, let’s examine the following code that produces a text input field:
+
+<form action="/example.html" method="POST">
+  <input type="text" name="first-text-field">
+</form>
+
+When initially loaded, it will be an empty box:
+            ______________________________
+            |     __________________      |
+            |     |                 |     |
+            |     |                 |     |
+            |     |_________________|     |
+            |_____________________________|
+
+rendered empty text field from input element type='text'
+
+
+After users type into the <input> element, 
+  the value of the value attribute becomes what is typed into the text field.
+
+The value of the value attribute is paired with the 
+  value of the name attribute and 
+  sent as text when the form is submitted. 
+
+For instance, if a user typed in “important details” in the text field 
+created by our <input> element:
+             ______________________________
+            |     __________________      |
+            |     | important       |     |
+            |     | details         |     |
+            |     |_________________|     |
+            |_____________________________|
+
+rendered filled text field which reads 'important details' 
+
+When the form is submitted, 
+  the text: "first-text-field=important details" is sent 
+to /example.html because the value of the name attribute is 
+"first-text-field" and the value of value is "important details".
+
+We could also assign a default value for the value attribute so that users 
+have a pre-filled text field when they first see the rendered form like so:
+
+<form action="/example.html" method="POST">
+  <input type="text" name="first-text-field" value="already pre-filled">
+</form>
+Which renders:
+
+pre-filled text box due to assigned `value` attribute
+
+
+
+Adding a Label
+In the previous exercise we created an <input> element but we didn’t include 
+anything to explain what the <input> is used for. 
+
+For a user to properly identify an <input> we use the appropriately named <label> element.
+
+The <label> element has an opening and closing tag and displays text that 
+is written between the opening and closing tags. 
+
+To associate a <label> and an <input>, the <input> needs an id attribute. 
+We then assign the for attribute of the <label> element with the value of 
+the id attribute of <input>, like so:
+
+<form action="/example.html" method="POST">
+  <label for="meal">What do you want to eat?</label>
+  <br>
+  <input type="text" name="food" id="meal">
+</form>
+
+The code above renders:
+  _________________________________________
+  | What do you want to eat ?             |
+  |  _________________                    |
+  |  |                |                   |
+  |  |________________|                   |
+  |_______________________________________|
+rendered form with labeled text field
+
+Look, now users know what the <input> element is for! 
+Another benefit for using the <label> element is when this element is clicked, 
+  the corresponding <input> is highlighted/selected.
+
+Let’s see the <label> element in action!
+
+
+
+
+
+
+Password Input
+Think about all those times we have to put sensitive information, like a password or PIN, into a <form>. We wouldn’t want our information to be seen by anyone peeking over our shoulder! Luckily, we have the type="password" attribute for <input>!
+
+An <input type ="password"> element will replace input text with another character like an asterisk (*) or a dot (•). The code below provides an example of how to create a password field:
+
+<form>
+  <label for="user-password">Password: </label>
+  <input type="password" id="user-password" name="user-password">
+</form>
+After a user types into the field, it would look like:
+
+password field in a form with 6 dots showing text added to the field
+Even though the password field obscures the text of the password, when the form is submitted, the value of the text is sent. In other words, if “hunter2” is typed into the password field, “user-password=hunter2” is sent along with the other information on the form.
+
+
+
+Number Input
+We’ve now gone over two type attributes for <input> related to text. But, we might want our users to type in a number — in which case we can set the type attribute to… (you guessed it)… "number"!
+
+By setting type="number" for an <input> we can restrict what users type into the input field to just numbers (and a few special characters like -, +, and .). We can also provide a step attribute which creates arrows inside the input field to increase or decrease by the value of the step attribute. Below is the code needed to render an input field for numbers:
+
+<form>
+  <label for="years"> Years of experience: </label>
+  <input id="years" name="years" type="number" step="1">
+</form>
+Which renders:
+
+rendered number input field with arrows to the right hand side of the field
+Now it’s time to apply this knowledge.
+
+
+
+
+
+
+Range Input
+Using an <input type="number"> is great if we want to allow users to type in any number of their choosing. But, if we wanted to limit what numbers our users could type we might consider using a different type value. Another option we could use is setting type to "range" which creates a slider.
+
+To set the minimum and maximum values of the slider we assign values to the min and max attribute of the <input>. We could also control how smooth and fluid the slider works by assigning the step attribute a value. Smaller step values will make the slider move more fluidly, whereas larger step values will make the slider move more noticeably. Take a look at the code to create a slider:
+
+<form>
+  <label for="volume"> Volume Control</label>
+  <input id="volume" name="volume" type="range" min="0" max="100" step="1">
+</form>
+The code above renders:rendered slider for volume control
+
+In the example above, every time the slider moves by one, the value of the <input>‘s value attribute changes.
+
+
+Checkbox Input
+So far the types of inputs we’ve allowed were all single choices. But, what if we presented multiple options to users and allow them to select any number of options? Sounds like we could use checkboxes! In a <form> we would use the <input> element and set type="checkbox". Examine the code used to create multiple checkboxes:
+
+<form>
+  <p>Choose your pizza toppings:</p>
+  <label for="cheese">Extra cheese</label>
+  <input id="cheese" name="topping" type="checkbox" value="cheese">
+  <br>
+  <label for="pepperoni">Pepperoni</label>
+  <input id="pepperoni" name="topping" type="checkbox" value="pepperoni">
+  <br>
+  <label for="anchovy">Anchovy</label>
+  <input id="anchovy" name="topping" type="checkbox" value="anchovy">
+</form>
+Which renders:HTML form asking user to select pizza toppings and three topping selections as checkboxes
+
+Notice in the example provided:
+
+there are assigned values to the value attribute of the checkboxes. These values are not visible on the form itself, that’s why it is important that we use an associated <label> to identify the checkbox.
+each <input> has the same value for the name attribute. Using the same name for each checkbox groups the <input>s together. However, each <input> has a unique id to pair with a <label>.
+Alright, time to use checkboxes in our code!
+
+
+
+
+
+Radio Button Input
+Checkboxes work well if we want to present users with multiple options 
+and let them choose one or more of the options. 
+
+However, there are cases where we want to present multiple options 
+and only allow for one selection — like asking users if they agree 
+or disagree with the terms and conditions. 
+
+Let’s look over the code used to create radio buttons:
+
+<form>
+  <p>What is sum of 1 + 1?</p>
+  <input type="radio" id="two" name="answer" value="2">
+  <label for="two">2</label>
+  <br>
+  <input type="radio" id="eleven" name="answer" value="11">
+  <label for="eleven">11</label>
+</form>
+
+
+Which renders:
+
+rendered form containing radio buttons
+
+Notice from the code snippet, 
+  radio buttons (like checkboxes) do not display their value. 
+We have an associated <label> to represent the value of the radio button. 
+To group radio buttons together, 
+  we assign them the same name and only one radio button from that group can be selected.
+
+Let’s see this in action by creating our own radio buttons.
+
+
+
+Dropdown list
+Radio buttons are great if we want our users to pick one option out of a few visible options, but imagine if we have a whole list of options! This situation could quickly lead to a lot of radio buttons to keep track of.
+
+An alternative solution is to use a dropdown list to allow our users to choose one option from an organized list. Here’s the code to create a dropdown menu:
+
+<form>
+  <label for="lunch">What's for lunch?</label>
+  <select id="lunch" name="lunch">
+    <option value="pizza">Pizza</option>
+    <option value="curry">Curry</option>
+    <option value="salad">Salad</option>
+    <option value="ramen">Ramen</option>
+    <option value="tacos">Tacos</option>
+  </select>
+</form>
+Which renders:rendered dropdown list with the first option showing
+
+And if we click on the field containing the first option, the list is revealed:rendered dropdown list with the all options showing
+
+Notice in the code that we’re using the element <select> to create the dropdown list. To populate the dropdown list, we add multiple <option> elements, each with a value attribute. By default, only one of these options can be selected.
+
+The text rendered is the text included between the opening and closing <option> tags. However, it is the value of the value attribute that is used in <form> submission (notice the difference in the text and value capitalization). When the <form> is submitted, the information from this input field will be sent using the name of the <select> and the value of the chosen <option>. For instance, if a user selected Pizza from the dropdown list, the information would be sent as "lunch=pizza".
+
+
+
+
+
+
+
+
+
+
+
+
+Datalist Input
+Even if we have an organized dropdown list, if the list has a lot of options, it could be tedious for users to scroll through the entire list to locate one option. That’s where using the <datalist> element comes in handy.
+
+The <datalist> is used with an <input type="text"> element. The <input> creates a text field that users can type into and filter options from the <datalist>. Let’s go over a concrete example:
+
+<form>
+  <label for="city">Ideal city to visit?</label>
+  <input type="text" list="cities" id="city" name="city">
+ 
+  <datalist id="cities">
+    <option value="New York City"></option>
+    <option value="Tokyo"></option>
+    <option value="Barcelona"></option>
+    <option value="Mexico City"></option>
+    <option value="Melbourne"></option>
+    <option value="Other"></option>  
+  </datalist>
+</form>
+Notice, in the code above, we have an <input> that has a list attribute. The <input> is associated to the <datalist> via the <input>‘s list attribute and the id of the <datalist>.
+
+From the code provided, the following form is rendered:input field with a label 'Ideal city to visit?'
+
+And when field is selected:clicking on the input field reveals a dropdown 
+list
+
+While <select> and <datalist> share some similarities, there are some major differences. In the associated <input> element, users can type in the input field to search for a particular option. If none of the <option>s match, the user can still use what they typed in. When the form is submitted, the value of the <input>‘s name and the value of the option selected, or what the user typed in, is sent as a pair.
+
+Now it’s time to make a <datalist> of our own!
+
+
+
+Textarea element
+An <input> element with type="text" creates a single row input field for users to type in information. However, there are cases where users need to write in more information, like a blog post. In such cases, instead of using an <input>, we could use <textarea>.
+
+The <textarea> element is used to create a bigger text field for users to write more text. We can add the attributes rows and cols to determine the amount of rows and columns for the <textarea>. Take a look:
+
+<form>
+  <label for="blog">New Blog Post: </label>
+  <br>
+  <textarea id="blog" name="blog" rows="5" cols="30">
+  </textarea>
+</form>
+In the code above, an empty <textarea> that is 5 rows by 30 columns is rendered to the page like so:
+
+rendered empty textarea element
+If we wanted an even bigger text field, we could click and drag on the bottom right corner to expand it.
+
+When we submit the form, the value of <textarea> is the text written inside the box. If we want to add a default value to <textarea> we would include it within the opening and closing tags like so:
+
+<textarea>Adding default text</textarea>
+This code will render a <textarea> that contains pre-filled text: “Adding default text”.
+
+But don’t just take our word for it, let’s test it out!
+
+
+
+Submit Form
+Remember, the purpose of a form is to collect information that will be submitted. That’s the role of the submit button — users click on it when they are finished with filling out information in the <form> and they’re ready to send it off. Now that we’ve gone over how to create various input elements, let’s now go over how to create a submit button!
+
+To make a submit button in a <form>, we’re going to use the reliable <input> element and set the type to "submit". For instance:
+
+<form>
+  <input type="submit" value="Send">
+</form>
+Which renders:
+
+rendered submit button
+Notice in the code snippet that the value assigned to the <input> shows up as text on the submit button. If there isn’t a value attribute, the default text, Submit shows up on the button.
+
+Let’s now add this element to make our <form>s complete!
+
+
+n this lesson we went over:
+
+The purpose of a <form> is to allow users to input information and send it.
+The <form>‘s action attribute determines where the form’s information goes.
+The <form>‘s method attribute determines how the information is sent and processed.
+To add fields for users to input information we use the <input> element and set the type attribute to a field of our choosing:
+Setting type to "text" creates a single row field for text input.
+Setting type to "password" creates a single row field that censors text input.
+Setting type to "number" creates a single row field for number input.
+Setting type to "range" creates a slider to select from a range of numbers.
+Setting type to "checkbox" creates a single checkbox that can be paired with other checkboxes.
+Setting type to "radio" creates a radio button that can be paired with other radio buttons.
+Setting type to "text" and adding the list attribute will pair the <input> with a <datalist> element if the list of <input> and the id of <datalist> are the same.
+Setting type to "submit" creates a submit button.
+A <select> element is populated with <option> elements and renders a dropdown list selection.
+A <datalist> element is populated with <option> elements and works with an <input> to search through choices.
+A <textarea> element is a text input field that has a customizable area.
+When a <form> is submitted, the name of the fields that accept input and the value of those fields are sent as name=value pairs.
+Using the <form> element in conjunction with the other elements listed above allows us to create sites that take into consideration the wants and needs of our users. Take the opportunity to take what you’ve learned, and apply it!
+
+
+
+
+
+Requiring an Input
+Sometimes we have fields in our <form>s which are not optional, i.e. there must be information provided before we can submit it. To enforce this rule, we can add the required attribute to an <input> element.
+
+Take for example:
+
+<form action="/example.html" method="POST">
+  <label for="allergies">Do you have any dietary restrictions?</label>
+  <br>
+  <input id="allergies" name="allergies" type="text" required>
+  <br>
+  <input type="submit" value="Submit">
+</form>
+This renders a text box, and if we try to submit the <form> without filling it out we get this message:
+
+message pop up prompting user to fill in the field
+
+The styling of the message varies from browser to browser, the picture above depicts the message in a Chrome browser. We’ll also continue to show these messages as they appear in Chrome in later exercises.
+
+Let’s see how it shows up in your browser!
+
+
+
+Set a Minimum and Maximum
+Another built-in validation we can use is to assign a minimum or maximum value for a number field, e.g. <input type="number"> and <input type="range">. To set a minimum acceptable value, we use the min attribute and assign a value. On the flip side, to set a maximum acceptable value, we assign the max attribute a value. Let’s see this in code:
+
+<form action="/example.html" method="POST">
+  <label for="guests">Enter # of guests:</label>
+  <input id="guests" name="guests" type="number" min="1" max="4">
+  <input type="submit" value="Submit">
+</form>
+If a user tries to submit an input that is less than 1 a warning will appear:prompt on a number field for user to input a value greater than or equal to 1
+
+A similar message will appear if a user tries to input a number greater than 4. Let’s now see this action.
+
+
+
+Checking Text Length
+In the previous exercise, we were able to use min and max to set acceptable minimum and maximum values in a number field. But what about text fields? There are certainly cases where we wouldn’t want our users typing more than a certain number of characters (think about the character cap for messages on Twitter). We might even want to set a minimum number of characters. Conveniently, there are built-in HTML5 validations for these situations.
+
+To set a minimum number of characters for a text field, we add the minlength attribute and a value to set a minimum value. Similarly, to set the maximum number of characters for a text field, we use the maxlength attribute and set a maximum value. Let’s take a look at these attributes in code:
+
+<form action="/example.html" method="POST">
+  <label for="summary">Summarize your feelings in less than 250 characters</label>
+  <input id="summary" name="summary" type="text" minlength="5" maxlength="250" required>
+  <input type="submit" value="Submit">
+</form>
+If a user tries to submit the <form> with less than the set minimum, this message appears:
+
+prompt on a number field for user to length the input
+
+And if a user tries to type in more than the maximum allowed number of characters, they don’t get a warning message, but they can’t type it in!
+
+Let’s add this validation to our <form>.
+
+
+
+Matching a Pattern
+In addition to checking the length of a text, we could also add a validation to check how the text was provided. For cases when we want user input to follow specific guidelines, we use the pattern attribute and assign it a regular expression, or regex. Regular expressions are a sequence of characters that make up a search pattern. If the input matches the regex, the form can be submitted.
+
+Let’s say we wanted to check for a valid credit card number (a 14 to 16 digit number). We could use the regex: [0-9]{14,16} which checks that the user provided only numbers and that they entered at least 14 digits and at most 16 digits.
+
+To add this to a form:
+
+<form action="/example.html" method="POST">
+  <label for="payment">Credit Card Number (no spaces):</label>
+  <br>
+  <input id="payment" name="payment" type="text" required pattern="[0-9]{14,16}">
+  <input type="submit" value="Submit">
+</form>
+With the pattern in place, users can’t submit the <form> with a number that doesn’t follow the regex. When they try, they’ll see a validation message like so:
+
+message prompting user to follow the requested format
+If you want to find out more about Regex, read more at the Docs RegEx entry.
+
+
+
+
+
+Review
+Awesome job adding client-side validation to <form>s!
+
+Let’s quickly recap:
+
+Client-side validations happen in the browser before information is sent to a server.
+Adding the required attribute to an input related element will validate that the input field has information in it.
+Assigning a value to the min attribute of a number input element will validate an acceptable minimum value.
+Assigning a value to the max attribute of a number input element will validate an acceptable maximum value.
+Assigning a value to the minlength attribute of a text input element will validate an acceptable minimum number of characters.
+Assigning a value to the maxlength attribute of a text input element will validate an acceptable maximum number of characters.
+Assigning a regex to pattern matches the input to the provided regex.
+If validations on a <form> do not pass, the user gets a message explaining why and the <form> cannot be submitted.
+These quick checks help ensure that input data is correct and safe for our servers. It also helps give users immediate feedback on what they need to fix instead of having to wait for a server to send back that information.
+
+
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Sign Up Page</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
+  </head>
+  <body>
+    <section class="overlay">
+			<h1>Sign Up</h1>
+      <p>Create an account:</p>
+      <form action="submission.html" method="GET">
+        <label for="username">Username:</label>
+        <br>
+				<!--Add the pattern attribute to the input below-->
+				<input id="username" name="username" type="text" required minlength="3" maxlength="15" required pattern="[a-zA-Z0-9]+">
+        <br>
+        <label for="pw">Password:</label>
+        <br>
+				<input id="pw" name="pw" type="password" required minlength="8" maxlength="15">
+        <br>
+        <input type="submit" value="Submit">
+      </form>
+    </section>
+  </body>
+</html>
+
+
+
+Introduction to Semantic HTML
+When building web pages, we use a combination of non-semantic HTML and Semantic HTML. The word semantic means “relating to meaning,” so semantic elements provide information about the content between the opening and closing tags.
+
+By using Semantic HTML, we select HTML elements based on their meaning, not on how they are presented. Elements such as <div> and <span> are not semantic elements since they provide no context as to what is inside of those tags.
+
+For example, instead of using a <div> element to contain our header information, we could use a <header> element, which is used as a heading section. By using a <header> tag instead of a <div>, we provide context as to what information is inside of the opening and closing tag.
+
+Why use Semantic HTML?
+
+Accessibility: Semantic HTML makes webpages accessible for mobile devices and for people with disabilities as well. This is because screen readers and browsers are able to interpret the code better.
+
+SEO: It improves the website SEO, or Search Engine Optimization, which is the process of increasing the number of people that visit your webpage. With better SEO, search engines are better able to identify the content of your website and weight the most important content appropriately.
+
+Easy to Understand: Semantic HTML also makes the website’s source code easier to read for other web developers.
+
+To better understand this, you can think of comparing non-semantic HTML to going into a store with no signs on the aisles. Since the aisles aren’t labeled, you don’t know what products are in those aisles. However, stores that do have signs for each aisle make it a lot easier to find the items you need, just like Semantic HTML.
+
+
+
+
+
+
+
+
+
+Header and Nav
+Let’s take a look at some semantic elements that assist in the structure of a web page. A <header> is a container usually for either navigational links or introductory content containing <h1> to <h6> headings.
+
+The example below shows <header> in action:
+
+<header>
+  <h1>
+     Everything you need to know about pizza!
+  </h1>
+</header>
+This can be compared to the code below which uses a <div> tag instead of a <header> tag:
+
+<div id="header">
+  <h1>
+    Everything you need to know about pizza!
+  </h1>
+</div>
+By using a <header> tag, our code becomes easier to read. It is much easier to identify what is inside of the <h1>‘s parent tags, as opposed to a <div> tag which would provide no details as to what was inside of the tag.
+
+A <nav> is used to define a block of navigation links such as menus and tables of contents. It is important to note that <nav> can be used inside of the <header> element but can also be used on its own.
+
+Let’s take a look at the example below:
+
+<header> 
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>      
+    </ul>
+  </nav>
+</header>
+By using <nav> as a way to label our navigation links, it will be easier for not only us, but also for web browsers and screen readers to read the code.
+
+Now that we’ve learned about the <header> and <nav> elements let’s add them into our code!
+
+
+
+
+Main and Footer
+Two more structural elements are <main> and <footer>. These elements along with <nav> and <header> help describe where an element is located based on conventional web development standards.
+
+The element <main> is used to encapsulate the dominant content within a webpage. This tag is separate from the <footer> and the <nav> of a web page since these elements don’t contain the principal content. By using <main> as opposed to a <div> element, screen readers and web browsers are better able to identify that whatever is inside of the tag is the bulk of the content.
+
+So how does <main> look when incorporated into our code? That’s a great question.
+
+<main>
+  <header>
+    <h1>Types of Sports</h1>
+  </header>
+  <article>
+    <h3>Baseball</h3>
+    <p>
+      The first game of baseball was played in Cooperstown, New York in the summer of 1839.
+    </p>
+  </article>
+</main>
+As we see above, <main> contains an <article> and <header> tag with child elements that hold the most important information related to the page.
+
+The content at the bottom of the subject information is known as the footer, indicated by the <footer> element. The footer contains information such as:
+
+Contact information
+Copyright information
+Terms of use
+Site Map
+Reference to top of page links
+For example:
+
+<footer>
+  <p>Email me at Codey@Codecademy.com</p>
+</footer>
+In the example above, the footer is used to contain contact information. The <footer> tag is separate from the <main> element and typically located at the bottom of the content.
+
+
+
+
+Article and Section
+Now that we covered the body of Semantic HTML, let’s focus on what can go in the body. The two elements we’re going to focus on now are <section> and <article>.
+
+<section> defines elements in a document, such as chapters, headings, or any other area of the document with the same theme. For example, content with the same theme such as articles about cricket can go under a single <section>. A website’s home page could be split into sections for the introduction, news items, and contact information.
+
+Here is an example of how to use <section>:
+
+<section>
+  <h2>Fun Facts About Cricket</h2> 
+</section>
+In the code above we created a <section> element to encapsulate the code. In <section> we added a <h2> element as a heading.
+
+The <article> element holds content that makes sense on its own. <article> can hold content such as articles, blogs, comments, magazines, etc. An <article> tag would help someone using a screen reader understand where the article content (that might contain a combination of text, images, audio, etc.) begins and ends.
+
+Here is an example of how to use <article>:
+
+<section>
+    <h2>Fun Facts About Cricket</h2>
+    <article>
+        <p>A single match of cricket can last up to 5 days.</p>
+    </article>
+</section>
+
+In the code above, 
+  the <article> element containing a fact about cricket was placed inside 
+  of the <section> element. 
+
+It is important to note that a <section> element could also be placed in an 
+<article> element depending on the context.
+
+
+
+
+
+
+The Aside Element
+The <aside> element is used to mark additional information that can enhance another element but isn’t required in order to understand the main content. This element can be used alongside other elements such as <article> or <section>. Some common uses of the <aside> element are for:
+
+Bibliographies
+Endnotes
+Comments
+Pull quotes
+Editorial sidebars
+Additional information
+Here’s an example of <aside> being used alongside <article>:
+
+<article>
+  <p>The first World Series was played between Pittsburgh and Boston in 1903 and was a nine-game series.</p>
+</article>
+<aside>
+  <p>
+   Babe Ruth once stated, “Heroes get remembered, but legends never die.” 
+  </p>
+</aside>
+As shown above, the information within the <article> is the important content. Meanwhile the information within the <aside> enhances the information in <article> but is not required in order to understand it.
+
+
+
+
+Figure and Figcaption
+With <aside>, we learned that we can put additional information next to a main piece of content, but what if we wanted to add an image or illustration? That is where <figure> and <figcaption> come in.
+
+<figure> is an element used to encapsulate media such as an image, illustration, diagram, code snippet, etc, which is referenced in the main flow of the document.
+
+<figure>
+  <img src="overwatch.jpg">
+</figure>
+In this code, we created a <figure> element so that we can encapsulate our <img> tag. In <figure> we used the <img> tag to insert an image onto the webpage. We used the src attribute within the <img> tag so that we can link the source of the image.
+
+It’s possible to add a caption to the image by using <figcaption>.
+
+<figcaption> is an element used to describe the media in the <figure> tag. Usually, <figcaption> will go inside <figure>. This is different than using a <p> element to describe the content; if we decide to change the location of <figure>, the paragraph tag may get displaced from the figure while a <figcaption> will move with the figure. This is useful for grouping an image with a caption.
+
+<figure>
+  <img src="overwatch.jpg">
+  <figcaption>This picture shows characters from Overwatch.</figcaption>
+</figure>
+In the example above, we added a <figcaption> into the <figure> element to describe the image from the previous example. This helps group the <figure> content with the <figcaption> content.
+
+While the content in <figure> is related to the main flow of the document, its position is independent. This means that you can remove it or move it somewhere else without affecting the flow of the document.
+
+
+
+
+
+
+
+
+
+
+
+
+Audio and Attributes
+Now that we learned about text-based content, let us dig into <audio>! Surely everyone needs <audio>—how else would you listen to your Korean hip hop?
+
+The <audio> element is used to embed audio content into a document. Like <video>, <audio> uses src to link the audio source.
+
+<audio>
+  <source src="iAmAnAudioFile.mp3" type="audio/mp3">
+</audio>
+In this example, we created an <audio> element. Then we created a <source> element to encapsulate our audio link. In this case, iAmAnAudioFile.mp3 is our audio file. Then we specified the type by using type and named what kind of audio it is. Although not always necessary, it’s recommended that we state the type of audio as it helps the browser identify it more easily and determine if that type of audio file is supported by the browser.
+
+We linked our audio file into the browser but now we need to give it controls. This is where attributes come in. Attributes provide additional information about an element.
+
+Attributes allow us to do many different things to our audio file. There are many attributes for <audio> but today we’re going to be focusing on controls and src.
+
+controls: automatically displays the audio controls into the browser such as play and mute.
+
+src: specifies the URL of the audio file.
+
+As you might have noticed, we already used the src attribute in the example code above. Most attributes go in the opening tag of <audio>. For example, here’s how we could add both autoplay functionality and audio controls:
+
+<audio autoplay controls>
+
+
+
+Video and Embed
+As demonstrated in the previous exercise, media content can be a useful addition to a website. By using a <video> element, we can add videos to our website. The <video> element makes it clear that a developer is attempting to display a video to the user.
+
+Some attributes that can alter a video playback include:
+
+controls: When added in, a play/pause button will be added onto the video along with volume control and a fullscreen option.
+autoplay: The attribute which results in a video automatically playing as soon as the page is loaded.
+loop: This attribute results in the video continuously playing on repeat.
+Below is an example of <video> being used with the controls attribute:
+
+<video src="coding.mp4" controls>Video not supported</video>
+In the code above, a video file named coding.mp4 is being played. The “Video not supported” will only show up if the browser is unable to display the video.
+
+
+
+
+
+
+
+
+
