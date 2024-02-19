@@ -1,0 +1,2352 @@
+CSS 
+can be applied in three ways 
+1.  External style sheet
+    <link rel="stylesheet" href="styles.css" >
+
+2.  Internal style sheet 
+<style>
+    p {
+        color: limegreen;
+    }
+</style>
+
+3.  Css in line with the element 
+    <p style="color: coral;">I'm Learning CSS!</p>
+
+inline style has most preferences since it has applied directly to the element 
+
+
+Selectors 
+selector {
+    /*Declaration */
+    property : property value;
+}
+
+p {
+    font-size: 64px;
+    color : red ;
+}
+
+element ---->  p {
+
+}
+class -----> .name {
+
+}
+id --------> #idname {
+    
+} 
+
+
+
+
+
+/* 
+universal selector it elements everything */
+/* * {
+    font-family:'Courier New', Courier, monospace;
+} */
+
+/* * {
+    border: 3px solid lightsalmon;
+} */
+html {
+    font-size: 22px;
+}
+body { 
+    font-size: 22px;
+}
+main {
+    font-family: monospace;
+}
+/*  form elements does not inherit from body */
+button,input,textarea,select {
+    font: inherit;
+}
+/* group selectors */
+h1,h2 {
+    color: red;
+}
+
+/* any h2s inside h1s  */
+/* h1 h2 {
+    color: blue;;
+} */
+
+
+p {
+    color: purple;
+}
+p {
+    color:blueviolet;
+}
+
+/* any span element inside p element */
+.highlight {
+    color: black;
+    text-transform: uppercase;
+    background-color: gold; 
+
+}
+.gray {
+    color : gray;
+}
+/* id selector   */
+#second {   /*most preference  ; but least used */
+    font-style: italic;
+}
+
+
+/* css colors */
+body {
+    font-size: 22px;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    background: #EEEEEE;
+    
+    color: #222831;
+}
+
+p {
+    color: #393E46;
+    /*
+    222831
+    393E46
+    00ADB5
+    EEEEEE
+    
+    
+    222831          EEEEEE
+    393E46          EEEEEE
+    
+    Large Text 
+    393E46          00ADB5
+
+    #222831         #00ADB5
+
+    #EEEEEE         #393E46
+
+    #EEEEEE         #222831
+    */
+    
+    
+    /* color: #fff; */
+}
+
+
+/*Css Units */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* width: 100% ; */
+    min-height: 100vh;
+}
+
+h1 { 
+    border: 2px dashed red;
+    width: 50%;  /*wrt to the parent font size */ 
+    font-size: 3rem;
+    padding: 0.5em;
+}
+
+main {
+    /* width: 50%; */
+    /* background-color: skyblue; */
+    font-size: 2rem;
+}
+
+p {
+    /* font-size : 32px; */
+
+    /* 1 root em  -> 1 root element of the root basically which browser sets  */
+    font-size: 2rem;               /*32 pixels*/
+    /* font-size: 2em; */
+    width: 40ch; /*40 character before the line wraps*/
+}
+
+
+/*
+em- Font size of the parent, in the case of typographical properties like
+    font-size, and font size of the element itself, in the case of other properties
+    Like width
+
+ch- The advance measure of the glyph "0"
+ of the element's font 
+
+rem - Font size of the root element 
+
+lh - Line hieght of the element 
+
+vw - 1% of the viewport's width
+
+vh -  1% of the viewport's height
+*/
+
+
+
+
+/*Box Model*/
+/* reset css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* h1 {
+    border: 2px dashed red;
+    width: 400px;
+    font-size: 3rem;
+    padding: 0.5em;
+} */
+
+.container {
+    /* border: 2px dashed red; */
+    /* border: 2px outset red; */
+    border: 10px double blue;
+
+    /* border-top: 5px solid green ; */
+    /* border-top-width: 5px  ; */
+    /* border-top-style: ridge; */
+    /* border-top-color: green ; */
+
+    /* border-right: 10px dotted blue; */
+    font-size: 1.5rem;
+    
+    margin: 1.5em;
+
+    /*
+    margin-top: 1.5em;
+    margin-right: 2em;
+    margin-bottom: 2em;
+    margin-left: 2em;
+    */
+    /*margin: 1.5em 2em;*/ /*in order top right bottom left */
+    /*1.5em apllied to the top and bottom 
+    2em applied to the right and left 
+    */
+    
+    /* margin: 1.5em 2em 3em 4em ; */
+    
+    
+    padding: 1.5em;
+    /* padding: 1.5em 2em 3em 4em; */
+    outline: 5px solid orange;
+    /* outline-offset: 5px; */
+    outline-offset: -20px;
+}
+
+.circle {
+    margin: 3rem auto;
+    background-color: gold;
+    width: 100px;
+    height: 100px;
+    border: 2px solid #000;
+    /* border-radius: 20px; */
+    border-radius: 50px;
+    outline: 2px solid red;
+    outline-offset: 0.25rem;
+}
+
+
+/* 
+Typography is the way that text is arranged and presented . 
+*/
+
+body {
+    padding:10%;
+    font-size : 2rem;
+    /*font-family: serif;*/ /*acdemacis / newspaper*/
+    /* font-family: sans-serif; */
+    /* font-family: monospace; */
+    /* font-family: cursive; */
+    /* font-family: fantasy; */
+
+    /* font-family: 'Courier New', Courier, monospace; */
+    font-family:Arial, Helvetica, sans-serif ;
+    /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+    /* font-family: 'Times New Roman', Times, serif; */
+
+}
+
+/* input,button do not inherit from body  */
+/* input,button {
+    font: inherit;
+} */
+
+
+p {
+    /* text-decoration: underline; */
+    /* text-decoration: overline; */
+    /* text-decoration: line-through; */
+    text-decoration: none ; /*default*/
+
+    /* text-transform: capitalize;*/  /*capitailise first alphabet of the word*/
+    /* text-transform: uppercase; */
+    /* text-transform: lowercase; */
+
+    /* text-align: left; */
+    /* text-align: justify; */
+    /* text-align: right; */
+
+    /* text-indent: 2em; */
+
+    line-height: 1.5;
+    /* letter-spacing: 0.1em; */
+    /* word-spacing: 0.5em; */
+
+    /* font-weight: normal; */
+    /* font-weight: lighter; */
+    /* font-weight: bolder; */
+
+    /* font-style: italic; */
+    /*font-style: oblique;*/ /*strong italic*/
+    /* font-style: normal; */
+
+
+}
+
+
+/*Styling Links */
+
+body {
+    padding: 10%;
+    font-size: 2rem;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+a {
+    /* text-decoration: none;
+    cursor: pointer;
+    color: blue; */
+
+    color: hsl(207, 44%, 49%);
+}
+
+a:visited 
+{
+    color: purple;
+}
+
+a:hover ,a:focus {
+    /* color: dodgerblue; */
+    /* color: hsl(189, 44%, 49%); */
+    color: hsl(207, 44%, 49%,0.8);
+    background-color: gold;
+
+    /* opacity: 0.8; */
+}
+
+a:active {
+    color: red;
+}
+
+
+
+
+/*List Styles */
+
+body {
+    padding: 5% 10%;
+    font-size: 2rem;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+ol {
+    /* list-style-type: decimal; */
+    /*list-style-type: disc;*/   /*THIS LOOKS LIKE UNORDERED LIST*/
+    list-style-type:lower-alpha;
+    /* list-style-type:lower-roman; */
+    /* list-style-type: upper-roman; */
+
+    list-style-type: none; /*defalut*/
+    padding :0 ; 
+}
+
+ul {
+    list-style-type: square;
+    text-align: center;
+    list-style-position: inside;
+    /* list-style-position: outside; */
+    color: blue;
+    line-height: 1.6;
+    /* list-style-image: url("../images/checkmark.png"); */
+    
+    
+    /* list-style: square url("../images/checkmark.png") inside; */
+
+}
+
+
+/* li {
+    color: red;
+} */
+/* ul li {
+    color: red;
+} */
+/* ul li:nth-child(2) {
+    color: red;
+} */
+/* ul li:nth-child(odd) {
+    color: red;
+} */
+ul li:nth-child(even) {
+    color: red;
+}
+
+
+ul ::marker {
+    color: red;
+    font-family: fantasy;
+    font-size: 1em;
+    content: "Only $5 >> ";
+
+}
+
+/*Display*/
+
+body {
+    font-size:2rem ;
+    font-family: sans-serif ;
+}
+/*block level element always stack ober each other and create a new line 
+while 
+inline elements do not stack over each other 
+
+block has 100% width 
+inline takes only content area
+*/
+.opposite {
+    display: inline-block;
+    background-color: #333;
+    color: whitesmoke;
+    margin-top: 100px;
+    height: 200px;
+    padding: 4rem;
+}
+
+/* main {
+    background-color: aquamarine;
+    width: 50%;
+} */
+
+p {
+    background-color: lightgray ;
+    margin: 100px 50px ;
+    
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+
+
+
+body {
+    font-size: 2rem;
+    font-family: sans-serif;
+}
+ul {
+    /* display: none; */
+
+    list-style-type: none;
+    padding: 0.5rem;
+    text-align: right;
+    background-color: black;
+    margin: 0;
+}
+
+li {
+    display: inline-block;
+    margin-inline: 0.5rem;
+}
+
+li a{
+    color: whitesmoke;
+    text-decoration: none;
+}
+li:hover,
+li:focus {
+    text-decoration: whitesmoke underline;
+}
+
+
+
+
+
+/*CSS Floats*/
+body {
+    font-size: 1.5rem;
+    font-family: sans-serif;
+}
+.block {
+    width:30vw;
+    height: 30vw;
+    background-color: black;
+    color: whitesmoke;
+    padding: 1rem;
+}
+
+.left {
+    float: left;
+    margin-right: 1rem;
+} 
+.right {
+    float: right;
+    margin-left: 1rem;
+}
+
+
+.clear {
+    clear: both;
+}
+/* p {
+    margin-left: 20px;
+} */
+
+
+section {
+    background-color: bisque;
+    border: 1px solid #333;
+    padding: 1rem;
+    /* overflow: auto; */
+    display: flow-root;
+}
+
+/*CSS Columns */
+
+body {
+    font-size: 1.5rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+.columns {
+    /* column-count: 4;
+    column-width: 250px; */
+    columns: 4 250px;
+    column-rule: 3px solid #333;
+    column-gap: 2rem;
+}
+
+.columns p {
+    margin-top: 0;
+}
+
+.columns h2 {
+    margin-top: 0;
+    background-color: #333;
+    color: #fff;
+    padding: 1rem ; 
+
+    break-inside: avoid;
+    /* break-before: column; */
+}
+
+/* margin-collaping  */
+
+
+
+.columns .quote {
+    margin-top: 2rem ;
+    font-size: 3rem;
+    text-align: center;
+    color: #333;
+    column-span: all ;
+}
+
+.nowrap {
+    white-space: nowrap ;
+    
+}
+
+/*CSS position*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    font-size:  1.5rem;
+    min-height: 200vh;
+}
+
+.outer-container {
+    border: 3px dashed #000;
+    width: 75vw;
+    height: 85vh;
+    margin: 40px auto;
+    position: relative;
+}
+
+.inner-container {
+    border: 2px solid #00f;
+    width: 40vw;
+    height: 50vh;
+    margin: 200px auto;
+    /* position: relative; */
+}
+
+.box {
+    width: 150px;
+    height: 150px;
+    color: white;
+    padding: 1rem;
+}
+
+.absolute {
+    background-color: blue;
+    position: absolute;
+    /* top: 100px;
+    left: 50px; */
+    top: 0;
+    left: 0;
+    /* left: -10000px; */
+    /*z-index: 0;*/ /*default*/
+    z-index: 1;
+}
+
+
+.relative {
+    background-color: red;
+    position: relative;
+    top: 300px;
+    left: 100px;
+
+}
+.fixed{
+    background-color:brown;
+    position: fixed;
+    top: 100px;
+}
+
+.sticky {
+    background-color: teal;
+    position: sticky;
+    top: 0;
+}
+
+
+
+
+/*Button element*/
+
+/*Remember, how to make things disappear! */
+
+
+html {
+    scroll-behavior: smooth;
+}
+section {
+    height: 100vh;
+}
+
+.blue {
+    background-color: #00f;
+}
+.red {
+    background-color: red;
+}
+.green {
+    background-color: green;
+}
+header, footer {
+    color: white;
+    text-align: center ;
+    height: 100px;
+    /* font-size: 5rem; */
+}
+
+header {
+    position: sticky;
+    top: 0;
+    font-size: 5rem;
+}
+
+footer {
+    /* background-color:#333 ;
+    position: fixed;
+    bottom: 0;
+    width: 100%; */
+
+
+    background-color: #333;
+    position: sticky;
+    bottom: 0;
+    font-size: 3rem;
+
+}
+
+a {
+    text-decoration: none;
+}
+a:visited {
+    color: white;
+}
+
+a:hover , a:focus {
+    text-decoration: underline;
+}
+.social {
+    background-color: royalblue;
+    color: white;
+    font-size: inherit;
+    padding: 1rem;
+    position: fixed;
+    top: 30%;
+    left: 0;
+    z-index: 1;
+} 
+
+
+
+/*Flexbox*/
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    min-height: 400px;
+    margin-inline: auto;
+    border: 1px solid #000;
+
+    /* Flex */
+    display: flex;
+    
+    
+    justify-content: center;
+    /* justify-content: flex-end; */
+    /* justify-content: flex-start; */
+    /* justify-content: space-around; */
+    /* justify-content: space-between; */
+    /* justify-content: space-evenly; */
+
+    /* align-items:flex-end; */
+    align-items: center;
+    /* align-items: flex-start; */
+    
+    
+    /* flex-direction: column; */
+    /* flex-direction: row; */
+    /* flex-direction: row-reverse; */
+    
+    /* flex-wrap: wrap; */
+
+    /*flex-flow:flex-direction  flex-wrap ;*/
+    flex-flow: row wrap;
+    /* flex-flow: row nowrap; */
+    /* flex-flow: row-reverse wrap;   */
+
+
+    /* align-content: flex-start; */
+    /* align-content: flex-end; */
+    /* align-content: space-between; */
+    align-content: space-evenly;
+
+    gap: 1rem;
+
+}   
+
+.box {
+    /* min-width: 100px; */
+    height: 100px;
+    background-color: #000;
+    color: #fff;
+    font-size: 2rem;
+    padding: 0.5rem;
+
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* flex-grow: 1; */
+    
+    /* flex-shrink: 1;
+    flex-basis: 100px; */
+
+    /* flex: grow shrink basics */
+    flex: 1 1 150px ;
+
+
+}
+
+.box:nth-child(2) {
+    /* flex-grow: 2;
+    flex-shrink: 2; */
+
+    /* flex: grow shrink basics  */
+    flex: 2 2 150px ;
+    
+
+    /* order: 4 ; */
+    /* order: -1; */
+    /* order: 0; */
+    order: 1 ;
+
+}
+
+using the justify-content property, which aligns items horizontally and accepts the following values:
+
+flex-start: Items align to the left side of the container.
+flex-end: Items align to the right side of the container.
+center: Items align at the center of the container.
+space-between: Items display with equal spacing between them.
+space-around: Items display with equal spacing around them
+
+
+
+
+
+Now use align-items to help the frogs get to the bottom of the pond. 
+This CSS property aligns items vertically and accepts the following values:
+
+flex-start: Items align to the top of the container.
+flex-end: Items align to the bottom of the container.
+center: Items align at the vertical center of the container.
+baseline: Items display at the baseline of the container.
+stretch: Items are stretched to fit the container.
+
+
+
+
+The frogs need to get in the same order as their lilypads using flex-direction. This CSS property defines the direction items are placed in the container, and accepts the following values:
+
+row: Items are placed the same as the text direction.
+row-reverse: Items are placed opposite to the text direction.
+column: Items are placed top to bottom.
+column-reverse: Items are placed bottom to top.
+
+
+
+
+Sometimes reversing the row or column order of a container is not enough. In these cases, we can apply the order property to individual items. By default, items have a value of 0, but we can use this property to also set it to a positive or negative integer value (-2, -1, 0, 1, 2).
+
+Use the order property to reorder the frogs according to their lilypads.
+
+
+
+Another property you can apply to individual items is align-self. This property accepts the same values as align-items and its value for the specific item.
+
+Oh no! The frogs are all squeezed onto a single row of lilypads. Spread them out using the flex-wrap property, which accepts the following values:
+
+nowrap: Every item is fit to a single line.
+wrap: Items wrap around to additional lines.
+wrap-reverse: Items wrap around to additional lines in reverse.
+
+
+
+The two properties flex-direction and flex-wrap are used so often together that the shorthand property flex-flow was created to combine them. This shorthand property accepts the value of the two properties separated by a space.
+
+For example, you can use flex-flow: row wrap to set rows and wrap them.
+Try using flex-flow to repeat the previous level.
+
+
+
+
+
+
+
+The frogs are spread all over the pond, but the lilypads are bunched at the top. You can use align-content to set how multiple lines are spaced apart from each other. This property takes the following values:
+
+flex-start: Lines are packed at the top of the container.
+flex-end: Lines are packed at the bottom of the container.
+center: Lines are packed at the vertical center of the container.
+space-between: Lines display with equal spacing between them.
+space-around: Lines display with equal spacing around them.
+stretch: Lines are stretched to fit the container.
+
+This can be confusing, but align-content determines the spacing between lines, while align-items determines how the items as a whole are aligned within the container. When there is only one line, align-content has no effect.
+
+
+
+
+/*CSS Grid */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Courier New', Courier, monospace ;
+    min-height: 100vh;
+
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-auto-rows: 50px auto 50px;
+    grid-template-areas: 
+        "hd hd hd hd hd hd hd hd hd" 
+        "mn mn mn mn mn mn mn sb sb"
+        "ft ft ft ft ft ft ft ft ft" ;
+    /* gap: 1rem; */
+    column-gap: 0.5rem ;
+}
+
+
+.el {
+    background-color: rebeccapurple;
+    color: #fff;
+    display: grid;
+    place-content: center;
+}
+
+.header {
+    grid-area: hd;
+}
+  
+.sidebar {
+    grid-area: sb;
+    background-color:brown;
+  }
+  
+.footer {
+    grid-area: ft;
+}
+
+.container {
+    grid-area: mn;
+    min-height: 400px;
+    display: grid;
+    /* grid-auto-flow: column; */
+    /* grid-template-columns: 200px 100px 200px; */
+
+    /*fraction units are used specially for the grids */
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    /* grid-template-columns: 200px 1fr 1fr; */
+
+
+    grid-template-columns: repeat(2, 1fr 2fr);
+    /* grid-template-rows: 200px; */
+
+    grid-auto-rows: minmax(150px, auto) ;
+    /* grid-auto-columns: ; */
+    
+    /* row-gap: 1em;
+    column-gap: 0.5em; */
+    /* gap: 1rem 0.5rem; */
+
+    gap: 1rem;
+
+
+}
+
+
+.box {
+    background-color: #000;
+    color: #fff;
+    font-size: 2rem;
+    padding: 0.5rem;
+}
+
+
+.box:first-child {
+    background-color: royalblue;
+
+    /* grid-column-start: 1;
+    /* grid-column-end: 4; */
+    
+    /* grid-row-start: 1; */
+    /* grid-row-end: 3; */ 
+    
+    /* grid-column: start/ end; */
+    grid-column: 1 / 4; 
+
+    /* grid-row: start / end ; */
+    grid-row : 1 / 3;
+
+    display: grid;
+    /* align-content: end ; */
+
+
+    /* align-content: center;
+    justify-content: center; */
+    place-content: center;
+
+
+}
+
+.box:nth-child(2) {
+    background-color: crimson;
+    grid-column: 1 / 5;
+    grid-row: 3 / 4 ;
+}
+
+
+
+By using the grid-column-start property.
+
+For example, grid-column-start: 3; will water the area starting at the 3rd vertical grid line, which is another way of saying the 3rd vertical border from the left in the grid.
+
+
+
+
+
+
+When grid-column-start is used alone, the grid item by default will span exactly one column. However, you can extend the item across multiple columns by adding the grid-column-end property.
+
+Using grid-column-end, water all of your carrots while avoiding the dirt. We don't want to waste any water! Note that the carrots start at the 1st vertical grid line and end at the 4th.
+
+
+
+
+
+When pairing grid-column-start and grid-column-end, you might assume that the end value has to be greater than the start value. But this turns out not the case!
+
+
+
+If you want to count grid lines from the right instead of the left, you can give grid-column-start and grid-column-end negative values. For example, you can set it to -1 to specify the first grid line from the right.
+
+Try setting grid-column-end to a negative value.
+
+
+
+
+Instead of defining a grid item based on the start and end positions of the grid lines, you can define it based on your desired column width using the span keyword. Keep in mind that span only works with positive values.
+
+For example, water these carrots with the rule grid-column-end: span 2;.
+
+
+
+
+
+
+
+
+
+You can also use the span keyword with grid-column-start to set your item's width relative to the end position.
+
+
+
+
+
+
+
+
+
+
+
+Typing both grid-column-start and grid-column-end every time can get tiring. Fortunately, grid-column is a shorthand property that can accept both values at once, separated by a slash.
+
+For example, grid-column: 2 / 4; will set the grid item to start on the 2nd vertical grid line and end on the 4th grid line.
+
+
+
+
+
+
+
+
+
+Try using grid-column to water these carrots. The span keyword also works with this shorthand property so give it a try!
+
+
+
+
+
+
+
+
+
+
+One of the things that sets CSS grids apart from flexbox is that you can easily position items in two dimensions: columns and rows. grid-row-start works much like grid-column-start except along the vertical axis.
+
+Use grid-row-start to water these carrots.
+/* grid-row-start : 3; */
+
+
+Now give the shorthand property grid-row a try.
+/* grid-row : 3 / span 3 ;  */
+
+You can also use grid-column and grid-row together to span larger areas within the grid. Give it a try!
+
+/* grid-column : 2/span 4;
+grid-row : span 5;  */
+
+
+
+
+
+
+
+
+If typing out both grid-column and grid-row is too much for you, there's yet another shorthand for that. grid-area accepts four values separated by slashes: grid-row-start, grid-column-start, grid-row-end, followed by grid-column-end.
+
+One example of this would be grid-area: 1 / 1 / 3 / 6;.
+/* grid-area : 1/ 2/ span 3 / span 4 ;  */
+
+
+
+
+
+
+
+
+
+
+How about multiple items? You can overlap them without any trouble. Use grid-area to define a second area that covers all of the unwatered carrots.
+
+
+
+
+
+
+
+
+If grid items aren't explicitly placed with grid-area, grid-column, grid-row, etc., they are automatically placed according to their order in the source code. We can override this using the order property, which is one of the advantages of grid over table-based layout.
+
+By default, all grid items have an order of 0, but this can be set to any positive or negative value, similar to z-index.
+
+Right now, the carrots in the second column are being poisoned and the weeds in the last column are being watered. Change the order value of the poison to fix this right away!
+
+
+
+
+
+
+
+
+Up to this point, you've had your garden set up as a grid with five columns, each 20% of the full width, and five rows, each 20% of the full height.
+
+This was done with the rules grid-template-columns: 20% 20% 20% 20% 20%; and grid-template-rows: 20% 20% 20% 20% 20%; Each rule has five values which create five columns, each set to 20% of the overall width of the garden.
+
+But you can set the grid up however you like. Give grid-template-columns a new value to water your carrots. You'll want to set the width of the 1st column to be 50%.
+
+
+
+
+
+
+
+
+
+
+
+
+Specifying a bunch of columns with identical widths can get tedious. Luckily there's a repeat function to help with that.
+
+For example, we previously defined five 20% columns with the rule grid-template-columns: 20% 20% 20% 20% 20%;. This can be simplified as grid-template-columns: repeat(5, 20%);
+
+Using grid-template-columns with the repeat function, create eight columns each with 12.5% width. This way you won't overwater your garden.
+
+
+
+
+
+Grid also introduces a new unit, the fractional fr. Each fr unit allocates one share of the available space. For example, if two elements are set to 1fr and 3fr respectively, the space is divided into 4 equal shares; the first element occupies 1/4 and the second element 3/4 of any leftover space.
+
+Here, weeds make up the left 1/6 of your first row and carrots the remaining 5/6. Create two columns with these widths using fr units.
+
+
+
+
+/*CSS Images */
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+/* Begin Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box ;
+}
+
+
+img {
+    display: block;
+}
+/* End Reset */
+
+/* Utitity Classes  */
+.nowrap {
+    white-space: nowrap;
+
+}
+
+.offscreen {
+    position: absolute;
+    left: -10000px;
+}
+
+/* End Utility Classes  */
+body {
+    font-family: 'Nunito', sans-serif;
+    min-height: 100vh;
+    background-color: aliceblue;
+
+    /* background-image: url(images/bubbles.png) , linear-gradient(to left ,steelblue,white);
+    background-repeat: repeat-y , no-repeat;
+    background-position: right center; */
+    
+    background: repeat-y right center url('images/bubbles.png') , no-repeat linear-gradient(to left, steelblue , white);
+    
+    background-size: 20%,auto;
+
+
+}
+
+.container {
+    background-color: rgb(251, 210, 156);
+    background-image: url('images/map-2176x1451.png') ;
+    background-repeat: no-repeat;
+    background-position: center center ;
+    background-size: cover; 
+}
+
+
+.hero {
+    border-bottom: 2px soild black;
+    padding :20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 30px;
+
+    background-color: hsla(0, 0%, 100%, 0.305);
+
+
+    /* background-color: rgb(251, 210, 156);
+    background-image: url('images/map-2176x1451.png') ;
+    background-repeat: no-repeat;
+    background-size: cover;  */
+
+
+
+    /* background-repeat: repeat-y; */
+    /* background-size: contain;  */
+}
+.h1 {
+    font-size: 500%;
+    color: aliceblue;
+    
+    /* text-shadow : xaxis yaix blurvalue  color-shadow  ; */
+    text-shadow : 2px 2px 5px black  ;
+    /* background-color: hsla(0, 0%, 0%, 0.403);
+    padding: 0.25rem;
+    border-radius: 10px; */
+}
+.profile-pic-figure {
+    width: 35% ;
+
+}
+
+.profile-pic-figure img{
+    width: 100%;
+    height: auto;
+    min-width: 100px;
+    border: 5px double black;
+    border-radius: 50%;
+}
+
+.example {
+    margin-top: 1rem;
+    padding-left: 20px;
+    border: 1px soild black ;
+}
+
+.example img {
+    width : 25% ;
+    height : auto ;
+}
+
+
+
+.clip {
+    font-weight: 800;
+    font-size: 18rem;
+    text-align: center;
+    background-image: url('images/scenic-2200x1331.png') ;
+    background-size: 100%;
+    text-transform: uppercase;
+    -webkit-background-clip: text ;
+    /* color: hsla(0, 0%, 0%, 0); */
+    color: transparent;
+}
+
+
+/*Medai Queries */
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+/*Reset*/
+* {
+    margin : 0 ;
+    padding:0;
+    box-sizing: border-box;
+}
+
+/*General Styles */
+body {
+    /* font : font-size font-family  */
+    font: 1.5rem "Nunito" ,sans-serif;
+    min-height: 100vh;
+
+    background-color: #6e0d25 ;
+    
+    background-image: radial-gradient(#ff930f, #fff95b);
+    display: flex;
+    flex-direction: column;
+
+}
+
+header ,nav , main,footer {
+    display: grid;
+    place-content: center;
+    grid-template-columns: 100%;
+    text-align: center;
+
+}
+
+header,footer {
+    position: sticky;
+    background-color: #1e293b;
+    color: #ffffb3;
+}
+
+header {
+    top: 0;
+}
+nav {
+    background-color: #ffe6a7;
+    color: #6f1d1b;
+    padding: 0.5rem;
+    border-bottom: 2px soild #1e293b;
+}
+main {
+    flex-grow: 1;
+}
+footer {
+    bottom: 0;
+}
+/*
+Syntax : 
+@media media type and (condition:breakpoint) {
+    //CSS rules
+}
+*/
+
+
+
+/* @media screen and (min-width : 481px) { */
+/* @media screen and (orientation: landscape) { */
+/* @media screen and (min-aspect-ratio : 16/9) {
+   
+
+} */
+
+
+
+
+/* || SMALL */
+@media screen and (min-width: 576px) {
+    body {
+        background-color: green;
+        background-image: radial-gradient( #f89b29 ,#ff0f7b);
+}
+
+    nav {
+        display: none;
+    }
+
+}
+
+/* || MEDIUM  */
+@media screen and (min-width: 768px) {
+    body {
+        background-color: crimson;
+        background-image: radial-gradient(#ef745c,#34073d);
+       
+    }
+}
+/* || Large  */
+@media screen and (min-width: 992px) {
+    body {
+        background-color: firebrick;
+        background-image: radial-gradient(#ea8c55,#c75146 ,#ad2e24 ,#81171b ,#540804);
+    }
+}
+/* || XL   */
+@media screen and (min-width: 1200px) {
+    body {
+        background-color: purple;
+        background-image: radial-gradient(#07f49e ,#42047e);
+    }
+}
+/* || mobile device Landscape  */
+@media screen and (max-height: 425px) and (min-aspect-ratio: 7/4 ) {
+    body {
+        background-color: dodgerblue;
+        background-image: radial-gradient(#f97794 #6200ff ,#3498db);
+    }
+    h1,h2 {
+        font-size: 1.5rem;
+    }
+    nav {
+        display: none;
+    }
+}
+
+
+/*      Card Project        */
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+/*Reset*/
+* {
+    margin : 0 ;
+    padding:0;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height:auto ;
+}
+/*Utility Classes */
+.nowrap {
+    white-space: nowrap ;
+
+}
+
+
+/*General Styles */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    /* font : font-size font-family  */
+    font: 1.5rem "Nunito" ,sans-serif;
+    min-height: 100vh;
+
+    background-color: #6e0d25 ;
+    
+    background-image: radial-gradient(#ff930f, #fff95b);
+    display: flex;
+    flex-direction: column;
+
+}
+
+header,footer {
+    position: sticky;
+    background-color: #1e293b;
+    color: #ffffb3;
+    text-align: center ;
+}
+
+header {
+    top: 0;
+}
+nav {
+    background-color: rgb(255, 230, 167);
+    padding: 0.5rem;
+    border-bottom: 2px soild #1e293b;
+    font-weight: bolder;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+nav a,nav a:visited {
+    color: #34073d;
+    text-decoration: none;
+}
+
+nav a:hover, nav a:focus {
+    color:hsl(290, 79%, 13% , 0.6);
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction : column ;
+    align-items: center ;
+    gap:1.5rem ;
+    padding:1rem;
+}
+footer {
+    bottom: 0;
+}
+
+
+
+/* Profile Card */
+.card {
+    scroll-margin-top: 8rem;
+    width: min(100%,350px);
+    background-color: #cbd5e1;
+    border: 2px soild #000;
+    border-radius: 15px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card figure {
+    display:flex ;
+    flex-flow:column nowrap;
+}
+
+.card img {
+    border:5px double #333;
+    border-radius: 50%;
+}
+
+.card figcaption {
+    font-weight: bolder;
+    font-size : 2rem ;
+    margin: 1rem;
+    text-align: center;
+}
+/*
+Syntax : 
+@media media type and (condition:breakpoint) {
+    //CSS rules
+}
+*/
+
+
+
+/* @media screen and (min-width : 481px) { */
+/* @media screen and (orientation: landscape) { */
+/* @media screen and (min-aspect-ratio : 16/9) {
+   
+
+} */
+
+
+
+
+/* || SMALL */
+@media screen and (min-width: 576px) {
+    
+    main {
+        justify-content: center;
+        flex-flow: row wrap;
+        padding:1rem
+    }
+    .card {
+        width: min(100%, 400px) ;
+    }
+
+    .card:last-child{
+        order: -1;
+    }
+
+}
+
+/* || MEDIUM  */
+@media screen and (min-width: 768px) {
+    nav {
+        display: none;
+    }
+    .card  {
+        width: min(100%,325px);
+    }
+    .card figure {
+        flex-flow: column-reverse;
+    }
+    .card figcaption{
+        margin: 0.1em 0;
+    }
+    .card p {
+        margin-top: 1rem;
+    }
+}
+
+
+
+
+
+
+/* || Large  */
+@media screen and (min-width: 992px) {
+    .card {
+        width: min(100%,400px);
+    }
+    .card:nth-child(2) {
+        order:-1;
+    }
+}
+
+
+
+
+
+/* || XL   */
+@media screen and (min-width: 1200px) {
+    .card {
+        width: min(calc(33% - 1rem) ,500px);
+    }
+}
+
+
+
+/* || mobile device Landscape  */
+@media screen and (max-height: 425px) and (min-aspect-ratio: 7/4 ) {
+    h1 {
+        font-size: 1.5rem;
+    }
+    nav {
+        display: none;
+    }
+    main {
+        flex-flow: row nowrap;
+        justify-content: space-evenly;
+        align-items: stretch;
+    }
+
+    .card {
+        width: min(calc(33%- 0.25rem));
+    }
+
+    .card figcaption , .card p {
+        font-size:1.25rem ;
+    }
+}
+
+
+
+/*CSS Pseudo */
+/*Pseudo*/
+
+/*Pseudo classes and Pseudo Elements */
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+/*Reset*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+  
+/* || UTILITY CLASSES */
+.nowrap {
+    white-space: nowrap;
+}
+  
+/* || GENERAL STYLES */
+html {
+    scroll-behavior: smooth;
+}
+  
+
+body {
+    /* font : font-size font-family  */
+    font: 1.5rem "Nunito" ,sans-serif;
+    min-height: 100vh;
+
+    background-color: #6e0d25 ;
+    
+    background-image: radial-gradient(#ff930f, #fff95b);
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* :is(header, footer , .card){ */
+/*:where(header, footer , .card) {   Specficity is 0*/
+header,
+footer {
+  position: sticky;
+  background-color: #1e293b;
+  color: whitesmoke;
+  text-align: center;
+  z-index: 1;
+}
+
+header {
+  top: 0;
+}
+
+nav {
+  background-color: #fff;
+  padding: 0.5rem;
+  border-bottom: 2px solid #000;
+  font-weight: bolder;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+
+
+nav a:any-link {                /*any-link --> selects both the visited and unvisited  */
+    color: #34073d;
+    text-decoration: none;
+}
+
+
+/* nav a:hover, nav a:focus {
+    color:hsl(290, 79%, 13% , 0.6);
+} */
+
+
+nav :is(a:hover, a:focus) {
+    color: hsla(0, 0%, 20%, 0.6);
+}
+  
+nav a:active {
+    color: red;
+}
+  
+main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1rem;
+}
+  
+footer {
+    bottom: 0;
+}
+
+/* Profile Card */
+.card {
+    scroll-margin-top: 8rem;
+    width: min(100%, 350px);
+    background-color: #cbd5e1;
+    border: 2px solid #000;
+    border-radius: 15px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card:target {
+  border: 12px solid rebeccapurple;
+}
+
+.card figure {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.card img {
+  border: 5px double #333;
+  border-radius: 50%;
+}
+
+/* .card img:[alt] {
+  border: 10px solid red;
+} */
+
+.card img:not([alt]) {
+  border: 10px solid red;
+}
+
+.card:nth-child(even) {
+  background-color: papayawhip;
+}
+  
+.card figcaption {
+  font-weight: bolder;
+  font-size: 2rem;
+  margin: 1rem;
+  text-align: center;
+}
+
+/* content: ' hello' ; */
+/* .card figcaption::after {
+    content: '✨';
+    display: block;
+} */
+.card figcaption::before {
+    content: '✨';
+    display: block;
+}
+
+.card figcaption::first-letter {
+  font-size: 3rem;
+}
+  
+.card p {
+  position: relative;
+}
+
+.card p::before {
+  content: open-quote;
+  font-size: 3em;
+  position: absolute;
+  top: -0.25em;
+  left: -0.5em;
+}
+
+.card p::after {
+  content: close-quote;
+  font-size: 3em;
+  position: absolute;
+  top: -0.25em;
+  right: -0.5em;
+}
+
+/* || SMALL */
+@media screen and (min-width: 576px) {
+    
+    main {
+        justify-content: center;
+        flex-flow: row wrap;
+        padding:1rem
+    }
+    .card {
+        width: min(100%, 400px) ;
+    }
+
+    .card:last-child{
+        order: -1;
+    }
+
+}
+
+/* || MEDIUM  */
+@media screen and (min-width: 768px) {
+    nav {
+        display: none;
+    }
+    .card  {
+        width: min(100%,325px);
+    }
+    .card figure {
+        flex-flow: column-reverse;
+    }
+    .card figcaption{
+        margin: 0.1em 0;
+    }
+    .card p {
+        margin-top: 1rem;
+    }
+}
+
+
+
+
+
+
+/* || Large  */
+@media screen and (min-width: 992px) {
+    .card {
+        width: min(100%,400px);
+    }
+    .card:nth-child(2) {
+        order:-1;
+    }
+}
+
+
+
+
+
+/* || XL   */
+@media screen and (min-width: 1200px) {
+    .card {
+        width: min(calc(33% - 1rem) ,500px);
+    }
+}
+
+
+
+/* || mobile device Landscape  */
+@media screen and (max-height: 425px) and (min-aspect-ratio: 7/4 ) {
+    h1 {
+        font-size: 1.5rem;
+    }
+    nav {
+        display: none;
+    }
+    main {
+        flex-flow: row nowrap;
+        justify-content: space-evenly;
+        align-items: stretch;
+    }
+
+    .card {
+        width: min(calc(33%- 0.25rem));
+    }
+
+    .card figcaption , .card p {
+        font-size:1.25rem ;
+    }
+}
+
+
+
+/*CSS Variables*/
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Variables */
+:root {  /*it is referening the document root */
+    
+    /* FONT */
+    --FF: "Nunito", sans-serif;
+    --FS: 1.5rem ;
+    --FS-XL : 3rem;
+
+    /* COLOR */
+    --BGCOLOR: #475569 ;
+    --ALT-BGCOLOR : #1e293b;
+    --RADIAL_COLOR: whitesmoke ;
+    --LIGHT_COLOR: whitesmoke;
+    --DARK_COLOR:#000;
+
+    /* SQUARE */
+    --SQUARE-BGCOLOR: papayawhip ;
+    --SQUARE-SIZE: max(150px, 20vw);
+
+    /* GENERAL */
+    --PADDING: 0.5rem;
+    --SHADOWS: 0 6px 5px -5px var(--DARK_COLOR);
+    --BORDERS: 2px soild var(--DARK_COLOR);
+}
+
+@media  (prefers-color-scheme: dark){
+    :root {
+        --BGCOLOR: #000 ;
+    --ALT-BGCOLOR : #333;
+    --RADIAL_COLOR: rgb(217,217,217) ;
+    --SQUARE-BGCOLOR: rgb(202,174,202) ;
+    }
+}
+
+/*  General Styles  */
+body {
+    font: var(--FS) var(--FF) ;
+    min-height: 100vh;
+
+    background-color: var(--BGCOLOR);
+    background-image: radial-gradient( var(--RADIAL_COLOR) , var(--BGCOLOR));
+
+    /* background-color: black; */
+
+    display: flex;
+    flex-direction: column;
+}
+
+header, nav, footer {
+    display: grid;
+    place-content: center;
+    grid-template-columns: 100%;
+    text-align: center;
+}
+
+header,footer {
+    position: sticky;
+    background-color: var(--ALT-BGCOLOR);
+    color: var(--LIGHT_COLOR);
+}
+
+header {
+    top:0 ;
+}
+
+nav {
+    background-color: var(--LIGHT_COLOR) ;
+    color: var(--DARK_COLOR);
+    padding: var(--PADDING);
+
+    /* border-bottom: 2px soild var(--DARK_COLOR); */
+    border-bottom: var(--BORDERS);
+
+    /* box-shadow: 0 6px 5px -5px var(--DARK_COLOR); */
+    box-shadow: var(--SHADOWS);
+}
+
+main {
+    flex-grow: 1;
+
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-flow: rowa wrap;
+    gap: min(4vw, 15px);
+}
+
+footer {
+    bottom: 0;
+}
+
+/* FEATURES */
+.square--highlight {
+    --SQUARE-BGCOLOR: cornflowerblue ;
+}
+.square {
+    background-color: var(--SQUARE-BGCOLOR);
+    width: var(--SQUARE-SIZE);
+    height: var(--SQUARE-SIZE);
+    border: var(--BORDERS);
+    border-radius: 15px;
+    display: grid ;
+    place-content: center;
+    font-size: var(--FS-XL);
+    box-shadow: var(--SHADOWS);
+}
+
+
+
+/*CSS Functions*/
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Variables */
+:root {  /*it is referening the document root */
+    
+    /* FONT */
+    --FF: "Nunito", sans-serif;
+    /* --FS: min(2.25rem,3vh) ; */
+    /* --FS: max(1.75rem,3vh) ; */
+    /* --FS: clamp(1.75rem ,3vh , 2.25rem); */
+    --FS: clamp(1.25rem ,2vh , 1.5rem);
+    --FS-XL : 3rem;
+
+    /* COLOR */
+    --BGCOLOR: #475569 ;
+    --ALT-BGCOLOR : #1e293b;
+    --RADIAL-COLOR: whitesmoke ;
+    --LIGHT_COLOR: whitesmoke;
+    --DARK_COLOR:#000;
+
+    /* SQUARE */
+    --SQUARE-BGCOLOR: papayawhip ;
+    --SQUARE-SIZE: max(150px, 20vw);
+
+    /* GENERAL */
+    --PADDING: 0.5em;
+    --SHADOWS: 0 6px 5px -5px var(--DARK_COLOR);
+    --BORDERS: 2px soild var(--DARK_COLOR);
+}
+
+@media  (prefers-color-scheme: light){
+    :root {
+    --BGCOLOR: #000 ;
+    --ALT-BGCOLOR : #333;
+    --RADIAL-COLOR: rgb(217, 217, 217) ;
+    --SQUARE-BGCOLOR: rgb(202,174,202) ;
+    }
+}
+
+/*  General Styles  */
+body {
+    font: var(--FS) var(--FF) ;
+    min-height: 100vh;
+
+    background-color: var(--BGCOLOR);
+    background-image: radial-gradient(var(--RADIAL-COLOR),var(--BGCOLOR));
+
+    /* background-color: black; */
+
+    display: flex;
+    flex-direction: column;
+}
+
+header, nav, footer {
+    display: grid;
+    place-content: center;
+    grid-template-columns: 100%;
+    text-align: center;
+}
+
+header,footer {
+    position: sticky;
+    background-color: var(--ALT-BGCOLOR);
+    color: var(--LIGHT_COLOR);
+}
+
+header {
+    top:0 ;
+}
+
+nav {
+    background-color: var(--LIGHT_COLOR) ;
+    color: var(--DARK_COLOR);
+    /* border-bottom: 2px soild var(--DARK_COLOR); */
+    border-bottom: var(--BORDERS);
+
+    /* box-shadow: 0 6px 5px -5px var(--DARK_COLOR); */
+    box-shadow: var(--SHADOWS);
+}
+
+main {
+    flex-grow: 1;
+    padding: var(--PADDING);
+   
+    display: grid;
+    grid-template-columns: repeat(4, minmax(100px, 300px));
+    
+    gap: min(2vw, 20px);
+
+
+    /* display: flex;
+    flex-flow:column nowrap;
+    justify-content: flex-start; */
+}
+
+main section {
+    flex-grow: 1;
+    padding: var(--PADDING);
+}
+
+main aside {
+    background-color: hsl(0, 0%, 20% , 0.8);
+    color: var(--LIGHT_COLOR);
+    font-style: italic;
+    padding: var(--PADDING);
+}
+.content {
+    margin-top: 20px;
+}
+
+.tooltip {
+    border-bottom: 2px dashed orange;
+    position: relative;
+}
+
+.tooltip:hover::before {
+    content: attr(data-tooltip);
+    position: absolute;
+    top: -20px;
+    white-space: nowrap;
+    background-color: var(--DARK_COLOR);
+    padding: var(--PADDING);
+    border-radius: 15px;
+}
+footer {
+    bottom: 0;
+}
+
+a:any-link {
+    color:#b42222 ;
+}
+
+a:hover, a:focus {
+    /* opacity: 0.6; */
+    filter: brightness(150%);
+    /* filter: hue-rotate(180deg); */
+}
+/* FEATURES */
+.square--highlight {
+    --SQUARE-BGCOLOR: #6495ed ;
+}
+.square {
+    background-color: var(--SQUARE-BGCOLOR);
+    /* width: var(--SQUARE-SIZE);
+    height: var(--SQUARE-SIZE); */
+    border: var(--BORDERS);
+    border-radius: 15px;
+    display: grid ;
+    place-content: center;
+    font-size: var(--FS-XL);
+    box-shadow: var(--SHADOWS);
+}
+
+
+
+
+@media screen and (min-width: 576px) {
+    main {
+        flex-flow: row nowrap;
+        justify-content: space-between;
+    }
+
+    main section {
+        width: calc(70% - 5px);
+    }
+
+    main aside {
+        width: calc(30% - 5px) ;
+    }
+}
+
+
+
+
+
+  /*CSS Animations */
+  * {
+    margin : 0 ;
+    padding: 0 ;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 1.5rem;
+    font-family: sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+div {
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    display: grid;
+    place-content: center;
+}
+
+
+div:first-child {
+    background-color: lightblue;
+    /* positive number will move it to right  */
+    /* negative number will move it to left  */
+    /*transform: translateX(-50%);*/ /*t move left or right   ---> of the element itself */
+
+
+    /* transform: rotateX(180deg); */
+
+
+    /* transform: scaleX(120%); */
+
+    /* transform: skewX(-10deg); */
+}
+
+div:nth-child(2) {
+    background-color: lightcyan;
+    /* positive number will move it to down  */
+    /* negative number will move it to up  */
+    /* transform: translateY(-2rem);  it will move it up or down */
+
+    /* transform: rotateY(180deg); */
+
+    /* transform: scaleY(120%); */
+
+    /* transform: skewY(10deg); */
+}
+
+div:last-child {
+    background-color: lightgoldenrodyellow;
+
+    /* transform: translate(x-value, y-value); */
+    /* transform: translate(100%, -2rem); */
+    /* transform: translate(100%, -5rem); */
+
+    /* transform: rotateZ(90deg); */
+    /* transform: rotateZ(180deg); */
+    /* transform: rotate(78deg); */
+
+    /* transform: scale(50%,50%); */
+
+    /* transform: skew(-10deg,-10deg); */
+}
+
+div:hover {
+    background-color: midnightblue;
+    
+    /* transition-property: background-color, transform;
+    transition-duration: 2s, 3s;
+    transition-delay: 0.5s ; */
+
+    /* transition-timing-function: linear; */
+
+    /* transition: all 2s ease 0.5s ; */
+    /* transition: all 2s linear 0.5s ; */
+    transition: all 2s 0.5s ;
+}
+
+div:last-child:hover {
+    transform: rotate(180deg);
+}
+
+
+.animate {
+    /* animation-name: slide;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 1s;
+    animation-iteration-count: 2;
+    animation-direction: normal;
+    animation-fill-mode: forwards; */
+
+    animation: 5s ease-in-out 1s 2 normal forwards slide;
+}
+
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    33% {
+        transform: translateX(300px) rotate(180deg);
+    }
+    66% {
+        transform: translateX(-300px) rotate(-180deg);
+    }
+    100% {
+        transform: translateX(0);
+        background-color: purple;
+    }
+}
+
+  
+
+
+
+## Suggestions to Organize Your CSS 
+
+-- Follow Your Team
+
+-- Use comments to create header 
+
+-- Sort properties alphabetically 
+
+-- Larger projects follow a namimg convetion methodolgy.  BEM - Block , Element , Modifier
+
+-- 
